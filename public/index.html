@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroFocus - Estudia más inteligente</title>
+    <title data-i18n="auto_idx_1">NeuroFocus - Estudia más inteligente</title>
     <meta name="description" content="NeuroFocus monitorea tu fatiga cognitiva en tiempo real. Estudia de forma inteligente, protege tu salud mental y mejora tu rendimiento académico.">
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +33,8 @@
 
             <div class="nav-buttons">
                 <button id="lang-toggle" class="lang-btn text-white">EN</button> 
-                <button id="open-register-button" class="button-white" data-i18n="btn_signup">Registrarse</button>
-                <button id="open-login-button" class="button-cyan" data-i18n="btn_login">Iniciar sesión</button>
+                <button id="theme-toggle" class="lang-btn text-white" style="margin-right: 10px;" data-i18n="auto_idx_3">Modo Claro</button>
+                <a href="dashboard.html" class="button-cyan" data-i18n="btn_comenzar" style="text-decoration: none;">¡Comenzar!</a>
             </div>
             
             <button id="mobile-menu-button" class="menu-toggle text-white">☰</button>
@@ -47,8 +47,7 @@
         <a href="#como-funciona" class="mobile-link" data-i18n="nav_como">¿Cómo funciona?</a>
         <a href="#padres" class="mobile-link" data-i18n="nav_padres">Padres</a>
         <a href="#sobre-nosotros" class="mobile-link" data-i18n="nav_nosotros">Sobre Nosotros</a>
-        <button id="open-register-button-mobile" class="button-white" data-i18n="btn_signup">Registrarse</button>
-        <button id="open-login-button-mobile" class="button-cyan" data-i18n="btn_login">Iniciar sesión</button>
+        <a href="dashboard.html" class="button-cyan" data-i18n="btn_comenzar" style="text-align: center; text-decoration: none; display: block; margin-top: 15px;">¡Comenzar!</a>
     </div>
 
     <div class="container">
@@ -59,25 +58,25 @@
                 <img src="assets/images/image1.png" alt="Estudiante usando NeuroFocus">
             </div>
             <div class="hero-text">
-                <span class="section-badge">BIENESTAR COGNITIVO</span>
+                <span class="section-badge" data-i18n="badge_bienestar">BIENESTAR COGNITIVO</span>
                 <h1 class="title-main text-white" data-i18n="hero_title">Estudia más inteligente, <br>no más exhausto</h1>
                 <p class="text-light hero-subtitle" data-i18n="hero_desc">Monitorea tu fatiga cognitiva en tiempo real mientras estudias. Conoce tus límites reales, mejora tu concentración y tómate un respiro sin sentir culpa.</p>
                 <div class="hero-actions">
-                    <button id="open-register-button-2" class="button-green btn-large" data-i18n="hero_btn">Comenzar Monitoreo →</button>
+                    <a href="dashboard.html" class="button-green btn-large" data-i18n="hero_btn" style="text-decoration: none;">Comenzar Monitoreo →</a>
                     <a href="#como-funciona" class="button-outline" data-i18n="hero_btn_secondary">Ver cómo funciona</a>
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item">
                         <span class="trust-dot dot-green"></span>
-                        <span class="trust-text">100% no invasivo</span>
+                        <span class="trust-text" data-i18n="trust_1">100% no invasivo</span>
                     </div>
                     <div class="trust-item">
                         <span class="trust-dot dot-cyan"></span>
-                        <span class="trust-text">Tiempo real</span>
+                        <span class="trust-text" data-i18n="trust_2">Tiempo real</span>
                     </div>
                     <div class="trust-item">
                         <span class="trust-dot dot-green"></span>
-                        <span class="trust-text">Privacidad total</span>
+                        <span class="trust-text" data-i18n="trust_3">Privacidad total</span>
                     </div>
                 </div>
             </div>
@@ -87,20 +86,20 @@
 
         <!-- ===================== PROBLEMA: Evidencia con datos ===================== -->
         <section class="problemas-section" id="problema">
-            <span class="section-badge section-badge-center">EL PROBLEMA</span>
+            <span class="section-badge section-badge-center" data-i18n="badge_problema">EL PROBLEMA</span>
             <div class="grid-problemas">
                 <div class="card-beige">
-                    <div class="card-stat">67.7%</div>
+                    <div class="card-stat" data-i18n="auto_idx_4">67.7%</div>
                     <p data-i18n="prob_1">de los estudiantes universitarios sufre de agotamiento emocional severo.</p>
                     <img src="assets/images/image2.png" alt="Agotamiento">
                 </div>
                 <div class="card-beige">
-                    <div class="card-stat">↑ Errores</div>
+                    <div class="card-stat" data-i18n="auto_idx_5">↑ Errores</div>
                     <p data-i18n="prob_2">Tu tasa de errores de escritura aumenta en la madrugada sin que lo notes.</p>
                     <img src="assets/images/image3.png" alt="Errores madrugada">
                 </div>
                 <div class="card-beige">
-                    <div class="card-stat">↓ Retención</div>
+                    <div class="card-stat" data-i18n="auto_idx_6">↓ Retención</div>
                     <p data-i18n="prob_3">Estudiar fatigado reduce drásticamente tu capacidad de retención.</p>
                     <img src="assets/images/image4.png" alt="Retención">
                 </div>
@@ -112,33 +111,33 @@
 
         <!-- ===================== CÓMO FUNCIONA: Beneficios con iconografía ===================== -->
         <section id="como-funciona" class="como-section">
-            <span class="section-badge section-badge-center">LA SOLUCIÓN</span>
+            <span class="section-badge section-badge-center" data-i18n="badge_solucion">LA SOLUCIÓN</span>
             <h2 class="title-section text-center text-white" data-i18n="como_title">¿Cómo funciona?</h2>
             <p class="text-center text-light descripcion-general" data-i18n="como_desc">NeuroFocus analiza tu comportamiento digital para detectar cuándo tu atención se dispersa. Todo ocurre en tiempo real, sin hardware adicional.</p>
             
             <div class="grid-funciones">
                 <div class="card-transparente">
-                    <div class="feature-step">01</div>
+                    <div class="feature-step" data-i18n="auto_idx_7">01</div>
                     <h3 data-i18n="func_1">Seguimiento de concentración en tiempo real</h3>
-                    <p class="feature-desc">Monitoreo pasivo de patrones de interacción y tiempos de respuesta.</p>
+                    <p class="feature-desc" data-i18n="auto_idx_8">Monitoreo pasivo de patrones de interacción y tiempos de respuesta.</p>
                     <img src="assets/images/image5.png" alt="Seguimiento">
                 </div>
                 <div class="card-transparente">
-                    <div class="feature-step">02</div>
+                    <div class="feature-step" data-i18n="auto_idx_9">02</div>
                     <h3 data-i18n="func_2">Análisis de desempeño</h3>
-                    <p class="feature-desc">Evaluación continua de tu dinámica de escritura y eficiencia cognitiva.</p>
+                    <p class="feature-desc" data-i18n="auto_idx_10">Evaluación continua de tu dinámica de escritura y eficiencia cognitiva.</p>
                     <img src="assets/images/image6.png" alt="Análisis">
                 </div>
                 <div class="card-transparente">
-                    <div class="feature-step">03</div>
+                    <div class="feature-step" data-i18n="auto_idx_11">03</div>
                     <h3 data-i18n="func_3">Alertas inteligentes</h3>
-                    <p class="feature-desc">Notificaciones preventivas antes de que la fatiga sea crítica.</p>
+                    <p class="feature-desc" data-i18n="auto_idx_12">Notificaciones preventivas antes de que la fatiga sea crítica.</p>
                     <img src="assets/images/image7.png" alt="Alertas">
                 </div>
                 <div class="card-transparente">
-                    <div class="feature-step">04</div>
+                    <div class="feature-step" data-i18n="auto_idx_13">04</div>
                     <h3 data-i18n="func_4">Ajuste automático del ritmo</h3>
-                    <p class="feature-desc">Adaptación inteligente basada en tu estado cognitivo actual.</p>
+                    <p class="feature-desc" data-i18n="auto_idx_14">Adaptación inteligente basada en tu estado cognitivo actual.</p>
                     <img src="assets/images/image8.png" alt="Ajuste">
                 </div>
             </div>
@@ -148,57 +147,57 @@
 
         <!-- ===================== MÉTRICAS: Visualización del estado del sistema ===================== -->
         <section id="metricas" class="metricas-section">
-            <span class="section-badge section-badge-center">DASHBOARD</span>
-            <h2 class="title-section text-center text-white">Tu estado cognitivo, visible al instante</h2>
-            <p class="text-center text-light descripcion-general">NeuroFocus transforma tus datos de comportamiento en métricas visuales claras. Comprende tu rendimiento de un vistazo.</p>
+            <span class="section-badge section-badge-center" data-i18n="badge_dashboard">DASHBOARD</span>
+            <h2 class="title-section text-center text-white" data-i18n="dash_title">Tu estado cognitivo, visible al instante</h2>
+            <p class="text-center text-light descripcion-general" data-i18n="dash_desc">NeuroFocus transforma tus datos de comportamiento en métricas visuales claras. Comprende tu rendimiento de un vistazo.</p>
 
             <div class="metrics-dashboard">
                 <div class="metric-card">
                     <div class="metric-header">
                         <span class="metric-dot dot-green"></span>
-                        <span class="metric-label">Nivel de Concentración</span>
+                        <span class="metric-label" data-i18n="auto_idx_15">Nivel de Concentración</span>
                     </div>
                     <div class="metric-bar-container">
                         <div class="metric-bar metric-bar-high" style="width: 78%"></div>
                     </div>
-                    <div class="metric-value">78% <span class="metric-status status-good">Óptimo</span></div>
+                    <div class="metric-value" data-i18n="auto_idx_17">78% <span class="metric-status status-good" data-i18n="auto_idx_16">Óptimo</span></div>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-header">
                         <span class="metric-dot dot-amber"></span>
-                        <span class="metric-label">Fatiga Detectada</span>
+                        <span class="metric-label" data-i18n="auto_idx_18">Fatiga Detectada</span>
                     </div>
                     <div class="metric-bar-container">
                         <div class="metric-bar metric-bar-medium" style="width: 35%"></div>
                     </div>
-                    <div class="metric-value">35% <span class="metric-status status-ok">Moderado</span></div>
+                    <div class="metric-value" data-i18n="auto_idx_20">35% <span class="metric-status status-ok" data-i18n="auto_idx_19">Moderado</span></div>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-header">
                         <span class="metric-dot dot-green"></span>
-                        <span class="metric-label">Tasa de Errores</span>
+                        <span class="metric-label" data-i18n="auto_idx_21">Tasa de Errores</span>
                     </div>
                     <div class="metric-bar-container">
                         <div class="metric-bar metric-bar-low" style="width: 12%"></div>
                     </div>
-                    <div class="metric-value">12% <span class="metric-status status-good">Normal</span></div>
+                    <div class="metric-value" data-i18n="auto_idx_23">12% <span class="metric-status status-good" data-i18n="auto_idx_22">Normal</span></div>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-header">
                         <span class="metric-dot dot-cyan"></span>
-                        <span class="metric-label">Tiempo de Sesión</span>
+                        <span class="metric-label" data-i18n="auto_idx_24">Tiempo de Sesión</span>
                     </div>
                     <div class="metric-bar-container">
                         <div class="metric-bar metric-bar-high" style="width: 65%"></div>
                     </div>
-                    <div class="metric-value">1h 35min <span class="metric-status status-ok">Pausa sugerida</span></div>
+                    <div class="metric-value" data-i18n="auto_idx_26">1h 35min <span class="metric-status status-ok" data-i18n="auto_idx_25">Pausa sugerida</span></div>
                 </div>
             </div>
 
-            <p class="text-center metrics-note text-light">Vista previa simulada del panel de monitoreo en tiempo real.</p>
+            <p class="text-center metrics-note text-light" data-i18n="dash_note">Vista previa simulada del panel de monitoreo en tiempo real.</p>
         </section>
 
         <hr class="section-divider">
@@ -206,21 +205,21 @@
         <!-- ===================== PADRES: Segmento secundario ===================== -->
         <section id="padres" class="padres-section">
             <div class="padres-text">
-                <span class="section-badge">PARA PADRES</span>
+                <span class="section-badge" data-i18n="badge_padres">PARA PADRES</span>
                 <h2 class="title-main text-white" data-i18n="padres_title">Padres</h2>
-                <p class="text-light">NeuroFocus muestra exactamente cuándo tu hijo se concentra y cuándo necesita apoyo. <strong>Datos reales, tranquilidad verdadera.</strong></p>
+                <p class="text-light" data-i18n="auto_idx_28">NeuroFocus muestra exactamente cuándo tu hijo se concentra y cuándo necesita apoyo. <strong data-i18n="auto_idx_27">Datos reales, tranquilidad verdadera.</strong></p>
                 
                 <div class="grid-padres-features">
                     <div class="feature-item">
-                        <p class="text-white">Reportes de concentración diaria</p>
+                        <p class="text-white" data-i18n="auto_idx_29">Reportes de concentración diaria</p>
                         <img src="assets/images/image9.png" alt="Reporte diario">
                     </div>
                     <div class="feature-item">
-                        <p class="text-white">Comparativas de reporte semanal</p>
+                        <p class="text-white" data-i18n="auto_idx_30">Comparativas de reporte semanal</p>
                         <img src="assets/images/image10.png" alt="Comparativa">
                     </div>
                     <div class="feature-item">
-                        <p class="text-white">Historial de sesiones completadas</p>
+                        <p class="text-white" data-i18n="auto_idx_31">Historial de sesiones completadas</p>
                         <img src="assets/images/image11.png" alt="Historial">
                     </div>
                 </div>
@@ -235,7 +234,7 @@
 
         <!-- ===================== SOBRE NOSOTROS: Entregas fundamentales ===================== -->
         <section id="sobre-nosotros" class="nosotros-section">
-            <span class="section-badge section-badge-center">NUESTRO COMPROMISO</span>
+            <span class="section-badge section-badge-center" data-i18n="badge_compromiso">NUESTRO COMPROMISO</span>
             <h2 class="title-section text-center text-white" data-i18n="nosotros_title">Sobre Nosotros</h2>
             <p class="text-center text-light descripcion-general" data-i18n="nosotros_desc">Somos un equipo comprometido con mitigar la crisis de salud mental y rendimiento académico universitario. La productividad no debe costar la estabilidad emocional.</p>
             
@@ -281,71 +280,11 @@
         </div>
     </footer>
 
-    <div id="login-modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="close-login-modal" class="close-btn">&times;</span>
-            <h2 class="text-white" data-i18n="modal_login_title">Iniciar Sesión</h2>
-            <form id="login-form">
-                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
-                <input type="email" id="login-email" class="input-field" placeholder="tu@correo.com" required>
-                
-                <label class="label-text" data-i18n="modal_password">Contraseña</label>
-                <input type="password" id="login-password" class="input-field" placeholder="••••••••" required>
-                
-                <p id="login-error" class="hidden error-text"></p>
-                <button type="submit" class="button-cyan w-100" data-i18n="modal_login_btn">Ingresar</button>
-            </form>
-            <div class="modal-foot-links">
-                <a href="#" id="open-password-link" class="text-cyan text-small" data-i18n="modal_forgot_pass">¿Olvidaste tu contraseña?</a>
-                <a href="#" id="open-register-link" class="text-light text-small" data-i18n="modal_no_account">¿No tienes cuenta? Registrarse</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="register-modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="close-register-modal" class="close-btn">&times;</span>
-            <h2 class="text-white" data-i18n="modal_reg_title">Crear Cuenta</h2>
-            <form id="register-form">
-                <label class="label-text" data-i18n="modal_reg_name">Nombre Completo</label>
-                <input type="text" id="reg-nombre" class="input-field" placeholder="Juan Pérez" required>
-                
-                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
-                <input type="email" id="reg-email" class="input-field" placeholder="tu@correo.com" required>
-                
-                <label class="label-text" data-i18n="modal_password">Contraseña</label>
-                <input type="password" id="reg-password" class="input-field" placeholder="••••••••" required>
-                
-                <p id="register-error" class="hidden error-text"></p>
-                <button type="submit" class="button-green w-100" data-i18n="modal_reg_btn">Registrarse</button>
-            </form>
-            <div class="modal-foot-links">
-                <a href="#" id="open-login-link" class="text-cyan text-small" data-i18n="modal_has_account">¿Ya tienes cuenta? Iniciar Sesión</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="password-modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="close-password-modal" class="close-btn">&times;</span>
-            <h2 class="text-white" data-i18n="modal_pass_title">Recuperar Contraseña</h2>
-            <p class="text-light text-small modal-description" data-i18n="modal_pass_desc">Ingresa tu correo para enviarte un enlace de recuperación.</p>
-            <form id="password-form">
-                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
-                <input type="email" id="pass-email" class="input-field" placeholder="tu@correo.com" required>
-                
-                <p id="password-message" class="hidden success-text"></p>
-                <button type="submit" class="button-cyan w-100" data-i18n="modal_pass_btn">Enviar Enlace</button>
-            </form>
-            <div class="modal-foot-links">
-                <a href="#" id="back-to-login-link" class="text-light text-small" data-i18n="modal_back_login">Volver a Iniciar Sesión</a>
-            </div>
-        </div>
-    </div>
+    <!-- Modales de login/registro eliminados, redirigiendo al dashboard -->
 
     <div id="contact-modal" class="modal hidden">
         <div class="modal-content">
-            <span id="close-contact-modal" class="close-btn">&times;</span>
+            <span id="close-contact-modal" class="close-btn" data-i18n="auto_idx_32">&times;</span>
             <h2 class="text-white" data-i18n="modal_contact_title">Formulario de Contacto</h2>
             <p class="text-light text-small modal-description" data-i18n="modal_contact_desc">¿Tienes preguntas sobre cómo ayudamos a tu hijo? Escríbenos.</p>
             <form id="contact-form">

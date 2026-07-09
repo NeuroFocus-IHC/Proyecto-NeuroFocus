@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFocus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/dashboard.css">
+</head>
+<body>
+
+    <main id="app-container">
+        
+        <section id="pantalla-login" class="view active">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <div style="flex-grow: 1;"></div>
+                    <div class="top-bar-icons">
+                        <button class="icon-btn text-style-5" id="login-lang-toggle">ES</button>
+                    </div>
+                </header>
+
+                <div class="logo-container">
+                    <img src="assets/images/neurofocus-logo.png" alt="Logo NeuroFocus" class="logo">
+                </div>
+
+                <h1 class="text-style-1 text-center">NeuroFocus</h1>
+                <p class="text-style-4 text-center text-muted" data-i18n="auto_dash_1">Panel de Estudiante</p>
+
+                <form class="login-form" onsubmit="event.preventDefault(); navegarA('pantalla-dashboard');">
+                    
+                    <div class="form-group">
+                        <label for="correo" class="text-style-9" data-i18n="auto_dash_2">Correo:</label>
+                        <input type="email" id="correo" class="form-control" data-i18n="dash_f_1" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="text-style-9" data-i18n="auto_dash_3">Contraseña:</label>
+                        <input type="password" id="password" class="form-control" data-i18n="dash_f_2" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="recordarme">
+                        <label for="recordarme" class="text-style-8" data-i18n="dash_recordarme">Recordarme</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large w-100" data-i18n="dash_login_btn">INGRESAR</button>
+                </form>
+
+                <div class="links-container">
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-recuperar')" data-i18n="dash_olvidaste">¿OLVIDASTE TU CONTRASEÑA?</button>
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-registro')" data-i18n="dash_crear_cuenta">CREAR CUENTA</button>
+                    <button type="button" class="btn-link text-style-10 mt-4" onclick="navegarA('pantalla-login-padres')" data-i18n="dash_entrar_padre">ENTRAR COMO PADRE</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pantalla-login-padres" class="view">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <div style="flex-grow: 1;"></div>
+                    <div class="top-bar-icons">
+                        <button class="icon-btn text-style-5" id="login-padres-lang-toggle">ES</button>
+                    </div>
+                </header>
+
+                <div class="logo-container">
+                    <img src="assets/images/neurofocus-logo.png" alt="Logo NeuroFocus" class="logo">
+                </div>
+
+                <h1 class="text-style-1 text-center">NeuroFocus</h1>
+                <p class="text-style-4 text-center text-muted" data-i18n="auto_dash_4">Panel de Padres</p>
+
+                <form class="login-form" onsubmit="event.preventDefault(); navegarA('pantalla-dashboard-padres');">
+                    
+                    <div class="form-group">
+                        <label for="correo-padre" class="text-style-9" data-i18n="auto_dash_5">Correo:</label>
+                        <input type="email" id="correo-padre" class="form-control" data-i18n="dash_f_3" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-padre" class="text-style-9" data-i18n="auto_dash_6">Contraseña:</label>
+                        <input type="password" id="password-padre" class="form-control" data-i18n="dash_f_4" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="recordarme-padre">
+                        <label for="recordarme-padre" class="text-style-8" data-i18n="dash_recordarme">Recordarme</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large w-100" data-i18n="dash_login_btn">INGRESAR</button>
+                </form>
+
+                <div class="links-container">
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-registro-padres')" data-i18n="dash_crear_cuenta">CREAR CUENTA</button>
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-recuperar')" data-i18n="dash_olvidaste">¿OLVIDASTE TU CONTRASEÑA?</button>
+                    <button type="button" class="btn-link text-style-10 mt-4" onclick="navegarA('pantalla-login')" data-i18n="dash_entrar_estudiante">ENTRAR COMO ESTUDIANTE</button>
+                </div>
+
+            </div>
+        </section>
+        <section id="pantalla-registro-padres" class="view bg-dark-navy">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-2 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_7">Cuéntanos de ti</h2>
+                </header>
+
+                <form class="register-form-padres" onsubmit="event.preventDefault(); navegarA('pantalla-registro-padres-2');">
+                    
+                    <div class="form-group">
+                        <label for="reg-correo-padre" class="text-style-9 text-white" data-i18n="auto_dash_8">Correo Electronico:</label>
+                        <input type="email" id="reg-correo-padre" class="form-control" data-i18n="dash_f_5" placeholder="Tu Correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password-padre" class="text-style-9 text-white" data-i18n="auto_dash_9">Contraseña:</label>
+                        <input type="password" id="reg-password-padre" class="form-control" data-i18n="dash_f_6" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password-repeat-padre" class="text-style-9 text-white" data-i18n="auto_dash_10">Repetir Contraseña:</label>
+                        <input type="password" id="reg-password-repeat-padre" class="form-control" data-i18n="dash_f_7" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="term-cond-padre" required>
+                            <label for="term-cond-padre" class="text-style-8 text-white" data-i18n="auto_dash_11">Acepto los terminos y condiciones</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="pol-priv-padre" required>
+                            <label for="pol-priv-padre" class="text-style-8 text-white" data-i18n="auto_dash_12">Acepto la politica de privacidad</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="mat-pub-padre">
+                            <label for="mat-pub-padre" class="text-style-8 text-white" data-i18n="auto_dash_13">Acepto el envio de material publicitario</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-large w-100 btn-spacing" data-i18n="auto_dash_14">CONTINUAR</button>
+                
+                </form>
+
+            </div>
+        </section>
+
+        <section id="pantalla-registro-padres-2" class="view bg-dark-navy">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-2 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_15">Sobre tu hijo</h2>
+                </header>
+
+                <form id="form-hijo" onsubmit="event.preventDefault();">
+                    
+                    <div class="form-group mb-3">
+                        <label for="hijo-nombre" class="text-style-9 text-white" data-i18n="auto_dash_16">Nombre:</label>
+                        <input type="text" id="hijo-nombre" class="form-control" data-i18n="dash_f_8" placeholder="Nombre del hijo" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="hijo-correo" class="text-style-9 text-white" data-i18n="auto_dash_17">Correo Electronico:</label>
+                        <input type="email" id="hijo-correo" class="form-control" data-i18n="dash_f_9" placeholder="Correo" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="hijo-edad" class="text-style-9 text-white" data-i18n="auto_dash_18">Edad:</label>
+                        <input type="number" id="hijo-edad" class="form-control" data-i18n="dash_f_10" placeholder="14" min="5" max="99" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <span class="text-style-9 text-white" data-i18n="auto_dash_19">Grado:</span>
+                        <div class="radio-group">
+                            <div class="form-radio">
+                                <input type="radio" id="grado-hijo-1" name="grado-hijo" value="1ro Secundaria" required>
+                                <label for="grado-hijo-1" class="text-style-8 text-white" data-i18n="auto_dash_20">1ro Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-hijo-2" name="grado-hijo" value="2do Secundaria">
+                                <label for="grado-hijo-2" class="text-style-8 text-white" data-i18n="auto_dash_21">2do Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-hijo-3" name="grado-hijo" value="3ro Secundaria" checked>
+                                <label for="grado-hijo-3" class="text-style-8 text-white" data-i18n="auto_dash_22">3ro Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-hijo-4" name="grado-hijo" value="4to Secundaria">
+                                <label for="grado-hijo-4" class="text-style-8 text-white" data-i18n="auto_dash_23">4to Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-hijo-5" name="grado-hijo" value="5to Secundaria">
+                                <label for="grado-hijo-5" class="text-style-8 text-white" data-i18n="auto_dash_24">5to Secundaria</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary btn-large w-100 mb-3" onclick="agregarHijo()" data-i18n="auto_dash_25">AGREGAR HIJO +</button>
+                    <button type="button" class="btn btn-secondary btn-large w-100" onclick="navegarA('pantalla-dashboard-padres')" data-i18n="auto_dash_26">CONTINUAR</button>
+                
+                </form>
+
+            </div>
+        </section>
+
+        <section id="pantalla-dashboard-padres" class="view">
+            <header class="top-bar">
+                <button class="icon-btn text-style-2" onclick="mostrarToast('Menú lateral en construcción')">☰</button>
+                <a href="#" onclick="event.preventDefault(); retroceder();" style="text-decoration: none; color: inherit;"><h2 class="text-style-3" data-i18n="auto_dash_27">Panel Parental</h2></a>
+                <div class="top-bar-icons">
+                    <button id="padres-lang-toggle" class="icon-btn text-style-3">EN</button>
+                    <button id="padres-theme-toggle" class="icon-btn text-style-3" style="font-size: 14px;" data-i18n="auto_dash_29">Modo Claro</button>
+                    <button class="icon-btn text-style-3" onclick="navegarA('pantalla-configuracion-padres')">⚙️</button>
+                    <button class="icon-btn text-style-3" onclick="mostrarToast('No tienes notificaciones nuevas')">🔔</button>
+                </div>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <h2 class="text-style-2 mb-4 mt-3" data-i18n="auto_dash_30">Mis Hijos</h2>
+                
+                <div id="lista-hijos-dashboard" class="mb-4">
+                </div>
+
+                <button type="button" class="btn btn-outline btn-large w-100" onclick="navegarA('pantalla-registro-padres-2')" data-i18n="auto_dash_31">+ AGREGAR HIJO</button>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-detalle-hijo" class="view">
+            <header class="top-bar" style="background-color: #FFF5F5; border-bottom: none;">
+                <button class="icon-btn text-style-2" onclick="retroceder()">←</button>
+                <h2 id="detalle-hijo-header-name" class="text-style-3" data-i18n="auto_dash_32">Nombre</h2>
+                <div class="top-bar-icons">
+                    <span class="status-dot bg-red"></span>
+                </div>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <h1 id="detalle-hijo-name" class="text-style-2 mb-1 mt-2" data-i18n="auto_dash_33">Nombre Apellido</h1>
+                <p id="detalle-hijo-info" class="text-style-8 text-muted mb-4" data-i18n="auto_dash_34">Edad - Grado</p>
+
+                <div class="alert-card border-red mb-3">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="text-red mr-2" style="font-size: 20px;" data-i18n="auto_dash_35">⚠️</span>
+                        <h3 class="text-style-7 text-red" data-i18n="auto_dash_36">FATIGA CRÍTICA</h3>
+                    </div>
+                    <p class="text-style-8 mb-1" data-i18n="auto_dash_37">Tiempo: 1h 32m</p>
+                    <p class="text-style-8 text-red" data-i18n="auto_dash_38">Sin pausas: 47m</p>
+                </div>
+
+                <div class="status-card mb-4">
+                    <h3 class="text-style-7 mb-3" data-i18n="auto_dash_39">Concentración</h3>
+                    
+                    <div class="progress-bar-container mb-2">
+                        <div class="progress-bar-fill bg-red" style="width: 25%;"></div>
+                    </div>
+                    
+                    <div class="concentration-details mb-2">
+                        <span class="text-style-1 text-red" style="font-size: 32px;" data-i18n="auto_dash_40">25%</span>
+                        <span class="text-style-9 text-red" data-i18n="auto_dash_41">Crítico</span>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mt-2">
+                        <span class="text-red mr-2" data-i18n="auto_dash_42">⚠️</span>
+                        <span class="text-style-9 text-red" data-i18n="auto_dash_43">Alerta</span>
+                    </div>
+                </div>
+
+                <div class="notification-box bg-light-red border-red mb-4">
+                    <p class="text-style-9 text-red text-center" data-i18n="auto_dash_44">Notificación Push recibida ahora</p>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-large w-100" onclick="navegarA('pantalla-notificacion-hijo')" data-i18n="auto_dash_45">VER NOTIFICACIÓN</button>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-notificacion-hijo" class="view bg-dark-navy">
+            <header class="top-bar" style="background: transparent; border-bottom: none;">
+                <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                <h2 class="text-style-3 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_46">Alerta Crítica</h2>
+            </header>
+
+            <div class="mobile-container pt-0 text-center">
+                
+                <div class="warning-circle bg-red mb-3">!</div>
+                <h2 class="text-style-2 text-red mb-1" data-i18n="auto_dash_47">Fatiga Crítica</h2>
+                <p id="notificacion-hijo-subtitle" class="text-style-8 text-white mb-4" data-i18n="auto_dash_48">Nombre - Ahora</p>
+
+                <div class="activity-card bg-dark-card border-red mb-3 text-left">
+                    <p class="text-style-8 text-white mb-2"><strong class="text-style-9" data-i18n="auto_dash_50">Concentración:</strong> 25%</p>
+                    <p class="text-style-8 text-white"><strong class="text-style-9" data-i18n="auto_dash_52">Tiempo continuo:</strong> 1 hora 32 minutos</p>
+                </div>
+
+                <div class="activity-card bg-dark-card border-red mb-4 text-left">
+                    <p class="text-style-9 text-white mb-2" data-i18n="auto_dash_53">Recomendación:</p>
+                    <p class="text-style-8 text-white" data-i18n="auto_dash_54">Tu hijo/a necesita tomar una pausa urgente de 15 min para recuperarse.</p>
+                </div>
+
+                <div class="action-buttons-stack mt-4">
+                    <button type="button" class="btn btn-secondary btn-large w-100 flex-column mb-3" onclick="navegarA('pantalla-mensaje-hijo')">
+                        <span data-i18n="auto_dash_55">ENVIAR MENSAJE</span>
+                        <span id="btn-enviar-mensaje-nombre" class="text-style-11 text-white" style="font-weight: 400;" data-i18n="auto_dash_56">A NOMBRE</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-large w-100 mb-3 text-white border-white" data-i18n="auto_dash_57">LLAMAR</button>
+                    <button type="button" class="btn-link text-style-10 text-white w-100" style="text-align: center; display: block;" onclick="navegarA('pantalla-detalle-hijo')" data-i18n="auto_dash_58">IGNORAR</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-mensaje-hijo" class="view bg-dark-navy">
+            <header class="top-bar" style="background: transparent; border-bottom: none;">
+                <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                <h2 id="mensaje-hijo-header" class="text-style-3 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_59">Mensaje a Nombre</h2>
+            </header>
+
+            <div class="mobile-container pt-0">
+                <h3 class="text-style-7 text-white mb-4 mt-2" data-i18n="auto_dash_60">Elige un mensaje:</h3>
+
+                <div class="form-group mb-4">
+                    
+                    <label class="message-card bg-dark-card mb-3">
+                        <div class="form-radio w-100">
+                            <input type="radio" name="mensaje-opcion" value="1">
+                            <span id="msg-opcion-1" class="text-style-8 text-white ml-2" data-i18n="auto_dash_61">"Hijo/a, veo que llevas mucho tiempo estudiando. Toma un descanso ❤️"</span>
+                        </div>
+                    </label>
+
+                    <label class="message-card bg-dark-card mb-3">
+                        <div class="form-radio w-100">
+                            <input type="radio" name="mensaje-opcion" value="2" checked>
+                            <span id="msg-opcion-2" class="text-style-8 text-white ml-2" data-i18n="auto_dash_62">"Nombre, la app indica que necesitas descansar. Pausa de 15 min 💙"</span>
+                        </div>
+                    </label>
+
+                    <label class="message-card bg-dark-card mb-4">
+                        <div class="form-radio w-100">
+                            <input type="radio" name="mensaje-opcion" value="3">
+                            <span class="text-style-8 text-white ml-2" data-i18n="auto_dash_63">"Hijo/a por favor recuerda tomarte descansos de vez en cuando que tambien importan"</span>
+                        </div>
+                    </label>
+
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-large w-100" onclick="navegarA('pantalla-confirmacion-mensaje')" data-i18n="auto_dash_64">ENVIAR AHORA</button>
+            </div>
+        </section>
+
+        <section id="pantalla-confirmacion-mensaje" class="view">
+            <div class="mobile-container text-center" style="padding-top: 80px;">
+                
+                <div class="success-circle mb-4">✔</div>
+                <h1 class="text-style-2 mb-3" data-i18n="auto_dash_65">Mensaje enviado</h1>
+                <p id="confirmacion-mensaje-subtitle" class="text-style-5 text-muted mb-4" data-i18n="auto_dash_66">Nombre recibirá tu mensaje en su dispositivo.</p>
+                
+                <button type="button" class="btn btn-primary btn-large w-100 mt-4" onclick="navegarA('pantalla-dashboard-padres')" data-i18n="auto_dash_67">VOLVER AL PANEL</button>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-registro" class="view bg-dark-navy">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-2 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_68">Cuéntanos de ti</h2>
+                </header>
+
+                <form class="register-form" onsubmit="event.preventDefault(); navegarA('pantalla-registro-2');">
+                    
+                    <div class="form-group">
+                        <label for="reg-correo" class="text-style-9 text-white" data-i18n="auto_dash_69">Correo Electronico:</label>
+                        <input type="email" id="reg-correo" class="form-control" data-i18n="dash_f_11" placeholder="Tu correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password" class="text-style-9 text-white" data-i18n="auto_dash_70">Contraseña:</label>
+                        <input type="password" id="reg-password" class="form-control" data-i18n="dash_f_12" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password-repeat" class="text-style-9 text-white" data-i18n="auto_dash_71">Repetir Contraseña:</label>
+                        <input type="password" id="reg-password-repeat" class="form-control" data-i18n="dash_f_13" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="term-cond" required>
+                            <label for="term-cond" class="text-style-8 text-white" data-i18n="auto_dash_72">Acepto los terminos y condiciones</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="pol-priv" required>
+                            <label for="pol-priv" class="text-style-8 text-white" data-i18n="auto_dash_73">Acepto la politica de privacidad</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="mat-pub">
+                            <label for="mat-pub" class="text-style-8 text-white" data-i18n="auto_dash_74">Acepto el envio de material publicitario</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-large w-100 btn-spacing" data-i18n="auto_dash_75">CONTINUAR</button>
+                
+                </form>
+
+            </div>
+        </section>
+        
+        <section id="pantalla-registro-2" class="view bg-dark-navy">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-2 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_76">Cuéntanos de ti</h2>
+                </header>
+
+                <form class="register-form" onsubmit="event.preventDefault(); navegarA('pantalla-intro-1');">
+                    
+                    <div class="form-group">
+                        <label for="reg-nombre" class="text-style-9 text-white" data-i18n="auto_dash_77">Nombre:</label>
+                        <input type="text" id="reg-nombre" class="form-control" data-i18n="dash_f_14" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-edad" class="text-style-9 text-white" data-i18n="auto_dash_78">Edad:</label>
+                        <input type="number" id="reg-edad" class="form-control" data-i18n="dash_f_15" placeholder="14" min="5" max="99" required>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="text-style-9 text-white" data-i18n="auto_dash_79">Grado:</span>
+                        <div class="radio-group">
+                            <div class="form-radio">
+                                <input type="radio" id="grado-1" name="grado" value="1" required>
+                                <label for="grado-1" class="text-style-8 text-white" data-i18n="auto_dash_80">1ro Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-2" name="grado" value="2">
+                                <label for="grado-2" class="text-style-8 text-white" data-i18n="auto_dash_81">2do Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-3" name="grado" value="3" checked>
+                                <label for="grado-3" class="text-style-8 text-white" data-i18n="auto_dash_82">3ro Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-4" name="grado" value="4">
+                                <label for="grado-4" class="text-style-8 text-white" data-i18n="auto_dash_83">4to Secundaria</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="grado-5" name="grado" value="5">
+                                <label for="grado-5" class="text-style-8 text-white" data-i18n="auto_dash_84">5to Secundaria</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="supervision-group">
+                        <span class="text-style-9 text-white supervision-title" data-i18n="auto_dash_85">¿Tus padres supervisarán?</span>
+                        <div class="form-check">
+                            <input type="checkbox" id="supervision-padres">
+                            <label for="supervision-padres" class="text-style-8 text-white" data-i18n="auto_dash_86">Sí, compartir con mis padres</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-large w-100 btn-spacing" data-i18n="auto_dash_87">CONTINUAR</button>
+                
+                </form>
+            </div>
+        </section>
+
+        <section id="pantalla-recuperar" class="view bg-dark-navy">
+            <div class="mobile-container">
+                <header class="top-bar" style="background: transparent; border-bottom: none;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-2 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="dash_olvidaste">Recuperar Contraseña</h2>
+                </header>
+
+                <p class="text-style-6 text-muted mb-4" data-i18n="modal_pass_desc">Ingresa tu correo para enviarte un enlace de recuperación.</p>
+
+                <form class="register-form" onsubmit="event.preventDefault(); mostrarToast('Enlace enviado. Revisa tu bandeja.'); retroceder();">
+                    <div class="form-group mb-4">
+                        <label for="recup-correo" class="text-style-9 text-white" data-i18n="auto_dash_8">Correo Electrónico:</label>
+                        <input type="email" id="recup-correo" class="form-control" data-i18n="dash_f_16" placeholder="tu@email.com" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-large w-100 btn-spacing" data-i18n="modal_pass_btn">Enviar Enlace</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="pantalla-intro-1" class="view">
+            <div class="mobile-container intro-container">
+                
+                <h1 class="text-style-1 text-center mb-4" data-i18n="auto_dash_88">Bienvenido a NeuroFocus</h1>
+
+                <div class="intro-image-card">
+                    <div class="smiley-icon"><img src="assets/images/carita-feliz.png" width="200"></div>
+                    <p class="text-style-8 mt-2" data-i18n="auto_dash_89">Estudiante feliz</p>
+                </div>
+
+                <p class="text-style-4 text-center mt-4 mb-4">
+                    Te ayudamos a estudiar mejor cuidando tu concentración
+                </p>
+
+                <div class="pagination-dots mb-4">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-large w-100" onclick="navegarA('pantalla-intro-2')" data-i18n="auto_dash_90">SIGUIENTE</button>
+                <button type="button" class="btn btn-outline btn-large w-100 mt-3" onclick="navegarA('pantalla-dashboard')" data-i18n="auto_dash_91">SALTAR</button>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-intro-2" class="view">
+            <div class="mobile-container intro-container">
+                
+                <h1 class="text-style-1 text-center mb-4" data-i18n="auto_dash_92">¿Cómo funciona?</h1>
+
+                <div class="intro-image-card bg-light-purple">
+                    <img src="assets/images/cabeza-pensando.png" alt="Cerebro + IA" class="intro-icon-img">
+                    <p class="text-style-8 mt-2" data-i18n="auto_dash_93">Cerebro + IA</p>
+                </div>
+
+                <p class="text-style-4 text-center mt-4 mb-4">
+                    Detectamos cuándo tu concentración baja mientras estudias, sin que te des cuenta
+                </p>
+
+                <div class="pagination-dots mb-4">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <div class="button-group-row w-100">
+                    <button type="button" class="btn btn-outline btn-large flex-1" onclick="retroceder()" data-i18n="auto_dash_94">ATRÁS</button>
+                    <button type="button" class="btn btn-primary btn-large flex-2" onclick="navegarA('pantalla-intro-3')" data-i18n="auto_dash_95">SIGUIENTE</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-intro-3" class="view">
+            <div class="mobile-container intro-container">
+                
+                <h1 class="text-style-1 text-center mb-4" data-i18n="auto_dash_96">Te avisamos 📱</h1>
+
+                <div class="intro-image-card bg-light-green">
+                    <img src="assets/images/campana.png" alt="Notificación" class="intro-icon-img">
+                    <p class="text-style-8 mt-2" data-i18n="auto_dash_97">Notificación</p>
+                </div>
+
+                <p class="text-style-4 text-center mt-4 mb-4">
+                    Cuando necesites descansar, te avisamos para que tomes una pausa y recargues energía
+                </p>
+
+                <div class="pagination-dots mb-4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <div class="button-group-row w-100">
+                    <button type="button" class="btn btn-outline btn-large flex-1" onclick="retroceder()" data-i18n="auto_dash_98">ATRÁS</button>
+                    <button type="button" class="btn btn-primary btn-large flex-2" onclick="navegarA('pantalla-intro-4')" data-i18n="auto_dash_99">SIGUIENTE</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-intro-4" class="view">
+            <div class="mobile-container intro-container">
+                
+                <h1 class="text-style-1 text-center mb-4" data-i18n="auto_dash_100">Tu progreso 📊</h1>
+
+                <div class="intro-image-card bg-light-yellow">
+                    <img src="assets/images/estadistica.png" alt="Gráfico" class="intro-icon-img">
+                    <p class="text-style-8 mt-2" data-i18n="auto_dash_101">Gráfico</p>
+                </div>
+
+                <p class="text-style-4 text-center mt-4 mb-4">
+                    Ve cómo mejoras tus hábitos de estudio semana a semana
+                </p>
+
+                <div class="pagination-dots mb-4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-large w-100" onclick="navegarA('pantalla-dashboard')" data-i18n="auto_dash_102">COMENZAR</button>
+                
+                <div class="button-center-wrapper">
+                    <button type="button" class="btn btn-outline btn-medium mt-3" onclick="retroceder()" data-i18n="auto_dash_103">ATRÁS</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-dashboard" class="view">
+            <header class="top-bar">
+                <button class="icon-btn text-style-2" onclick="mostrarToast('Menú lateral en construcción')">☰</button>
+                <a href="#" onclick="event.preventDefault(); retroceder();" style="text-decoration: none; color: inherit;"><h2 class="text-style-3">NeuroFocus</h2></a>
+                <div class="top-bar-icons">
+                    <button id="dashboard-lang-toggle" class="icon-btn text-style-3">EN</button>
+                    <button id="dashboard-theme-toggle" class="icon-btn text-style-3" style="font-size: 14px;" data-i18n="auto_dash_105">Modo Claro</button>
+                    <button class="icon-btn text-style-3" onclick="navegarA('pantalla-configuracion')">⚙️</button>
+                    <button class="icon-btn text-style-3" onclick="mostrarToast('No tienes notificaciones nuevas')">🔔</button>
+                </div>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <h1 class="text-style-1 greeting-title" data-i18n="auto_dash_106">¡Hola, Diego! 👋</h1>
+                
+                <div class="motivational-box">
+                    <p class="text-style-8">
+                        <em data-i18n="auto_dash_107">"Cada desafío que resuelves te convierte en un mejor ingeniero de software. ¡Mantén el enfoque!"</em>
+                    </p>
+                </div>
+
+                <div class="status-card">
+                    <h3 class="text-style-7 status-title" data-i18n="auto_dash_108">Tu Estado</h3>
+                    
+                    <div class="status-item">
+                        <span class="status-dot optimal"></span>
+                        <span class="text-style-6 status-text-green" data-i18n="auto_dash_109">Óptimo</span>
+                    </div>
+                    
+                    <div class="status-item mt-2">
+                        <span class="status-icon-check">✔</span>
+                        <span class="text-style-8" data-i18n="auto_dash_110">Listo para estudiar</span>
+                    </div>
+                </div>
+
+                <p class="text-style-4 text-center mt-4 mb-3" data-i18n="auto_dash_111">¿Listo para tu primera sesión?</p>
+
+                <button type="button" class="btn btn-primary btn-large w-100" onclick="navegarA('pantalla-tarea')" data-i18n="auto_dash_112">EMPEZAR TAREA</button>
+
+                <div class="links-container">
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-intro-1')" data-i18n="auto_dash_113">VER TUTORIAL</button>
+                    <button type="button" class="btn-link text-style-10" onclick="navegarA('pantalla-configuracion')" data-i18n="auto_dash_114">CONFIGURACIÓN</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pantalla-configuracion" class="view bg-dark-navy">
+            <div class="mobile-container pt-0">
+                
+                <header class="top-bar" style="padding: 16px 0; border-bottom: none; background: transparent;">
+                    <button class="icon-btn text-style-2 text-white" onclick="retroceder()">←</button>
+                    <h2 class="text-style-3 text-white" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_115">⚙️ Configuracion</h2>
+                </header>
+
+                <div class="mb-4 mt-2">
+                    <p class="text-style-8 text-white mb-2" data-i18n="auto_dash_116">Informe Semanal</p>
+                    <button type="button" class="btn btn-secondary btn-large w-100" onclick="navegarA('pantalla-informe')" data-i18n="auto_dash_117">VER INFORME SEMANAL</button>
+                </div>
+
+                <div class="mb-4">
+                    <p class="text-style-8 text-white mb-2" data-i18n="auto_dash_118">Agregar Padre:</p>
+                    <form id="form-agregar-padre" onsubmit="agregarPadre(event)">
+                        <input type="email" id="padre-correo" class="form-control mb-2" data-i18n="dash_f_17" placeholder="Ingresar Correo" required>
+                        <input type="text" id="padre-nombre" class="form-control mb-3" data-i18n="dash_f_18" placeholder="Nombre del padre" required>
+                        <button type="submit" class="btn btn-secondary btn-large w-100" data-i18n="auto_dash_119">AGREGAR PADRE +</button>
+                    </form>
+                </div>
+
+                <div class="mb-4">
+                    <p class="text-style-8 text-white mb-1" data-i18n="auto_dash_120">Padres:</p>
+                    <ul id="lista-padres" class="text-style-5 text-white pl-4">
+                        <li id="no-padres-msg" data-i18n="auto_dash_121">No hay padres registrados</li>
+                    </ul>
+                </div>
+
+                <div class="action-buttons-stack mt-4">
+                    <button type="button" class="btn btn-danger btn-large w-100 mb-3" onclick="navegarA('pantalla-login')" data-i18n="auto_dash_122">CERRAR SESIÓN</button>
+                    <button type="button" class="btn btn-secondary btn-large w-100" onclick="navegarA('pantalla-dashboard')" data-i18n="auto_dash_123">VOLVER</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pantalla-informe" class="view">
+            <header class="top-bar">
+                <button class="icon-btn text-style-2" onclick="retroceder()">←</button>
+                <h2 class="text-style-3" data-i18n="auto_dash_124">Diego 📊</h2>
+                <div class="top-bar-icons">
+                    <button class="icon-btn text-style-3">⋮</button>
+                </div>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <p class="text-style-8 text-muted mt-2 mb-1" data-i18n="auto_dash_125">Semana: 5-11 Mayo</p>
+                <h1 class="text-style-1 mb-4" data-i18n="auto_dash_126">Diego</h1>
+
+                <div class="status-card text-center mb-4">
+                    <p class="text-style-8 text-muted mb-2" data-i18n="auto_dash_127">Horas totales</p>
+                    <h1 class="text-style-1 text-deep-navy" style="font-size: 48px;" data-i18n="auto_dash_128">11.5h</h1>
+                </div>
+
+                <h3 class="text-style-7 mb-3" data-i18n="auto_dash_129">Sesiones por día:</h3>
+
+                <div class="daily-stats-list mb-4">
+                    
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_130">Lun</span>
+                        <span class="status-icon text-muted">✓</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 80%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_131">2h</span>
+                    </div>
+                    
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_132">Mar</span>
+                        <span class="status-icon text-muted">✓</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 60%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_133">1.5h</span>
+                    </div>
+
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_134">Mie</span>
+                        <span class="status-icon text-warning-amber">▲</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 100%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_135">3h</span>
+                    </div>
+
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_136">Jue</span>
+                        <span class="status-icon text-muted">✓</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 80%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_137">2h</span>
+                    </div>
+
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_138">Vie</span>
+                        <span class="status-icon text-muted">✓</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 60%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_139">1.5h</span>
+                    </div>
+
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_140">Sab</span>
+                        <span class="status-icon text-muted">✓</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 80%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_141">2h</span>
+                    </div>
+
+                    <div class="daily-stat-row">
+                        <span class="text-style-8 day-label" data-i18n="auto_dash_142">Dom</span>
+                        <span class="status-icon text-muted">○</span>
+                        <div class="daily-bar-container mx-2">
+                            <div class="daily-bar-fill bg-deep-navy" style="width: 0%;"></div>
+                        </div>
+                        <span class="text-style-8 time-label" data-i18n="auto_dash_143">0h</span>
+                    </div>
+
+                </div>
+
+                <div class="status-indicator-row mb-3">
+                    <span class="status-icon-check large-check mr-2">✔</span>
+                    <h3 class="text-style-7" data-i18n="auto_dash_144">Estado General: Saludable</h3>
+                </div>
+
+                <div class="alert-box-yellow mb-4">
+                    <span class="text-warning-amber font-weight-bold mr-2">▲</span>
+                    <span class="text-style-8" data-i18n="auto_dash_145">1 alerta crítica (Miércoles 8pm)</span>
+                </div>
+
+                <div class="summary-footer">
+                    <div class="summary-text">
+                        <p class="text-style-8 mb-2" data-i18n="auto_dash_146">Pausas tomadas: 8</p>
+                        <p class="text-style-8" data-i18n="auto_dash_147">Adherencia: 67%</p>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-medium" data-i18n="auto_dash_148">COMPARTIR</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pantalla-tarea" class="view">
+            <header class="top-bar">
+                <button class="icon-btn text-style-2" onclick="retroceder()">←</button>
+                <h2 class="text-style-3" data-i18n="auto_dash_149">Sesión Activa</h2>
+                <div class="top-bar-icons">
+                    <button class="icon-btn text-style-3">⋮</button>
+                </div>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <div class="timer-section text-center mt-4 mb-4">
+                    <div class="stopwatch-icon mb-2" data-i18n="auto_dash_150">⏱️</div>
+                    <h1 id="timer-display" class="text-style-1" style="font-size: 40px;" data-i18n="auto_dash_151">00:00:00</h1>
+                    <p class="text-style-5 text-muted" data-i18n="auto_dash_152">Tiempo estudiando</p>
+                </div>
+
+                <div id="concentration-card" class="status-card mb-4">
+                    <h3 class="text-style-10 mb-2" data-i18n="auto_dash_153">CONCENTRACIÓN</h3>
+                    
+                    <div class="progress-bar-container mb-3">
+                        <div id="concentration-bar" class="progress-bar-fill bg-soft-teal"></div>
+                    </div>
+                    
+                    <div class="concentration-details">
+                        <span id="concentration-percentage" class="text-style-1" style="font-size: 32px;">100%</span>
+                        
+                        <div class="status-indicator">
+                            <span id="concentration-dot" class="status-dot optimal"></span>
+                            <span id="concentration-text" class="text-style-8" data-i18n="auto_dash_154">Normal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-section mb-4">
+                    
+                    <div class="stat-row mb-3">
+                        <div class="stat-label text-style-8 text-muted mb-1" data-i18n="auto_dash_155">Velocidad tecleo</div>
+                        <div class="stat-bar-group">
+                            <div class="progress-bar-container flex-grow-1 mr-3">
+                                <div id="kpm-bar" class="progress-bar-fill bg-deep-navy" style="width: 0%;"></div>
+                            </div>
+                            <span id="kpm-display" class="text-style-6" data-i18n="auto_dash_156">0 kpm</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-row mb-3">
+                        <div class="stat-label text-style-8 text-muted mb-1" data-i18n="auto_dash_157">Tasa de errores</div>
+                        <div class="stat-bar-group">
+                            <div class="progress-bar-container flex-grow-1 mr-3">
+                                <div class="progress-bar-fill bg-deep-navy" style="width: 4%;"></div>
+                            </div>
+                            <span class="text-style-6" data-i18n="auto_dash_158">4%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="text-style-5 text-muted" style="font-size: 16px;" data-i18n="auto_dash_159">Pausas: 0</span>
+                    </div>
+                    
+                </div>
+
+                <div class="action-buttons-stack mt-4">
+                    <button type="button" id="btn-pausar-tarea" class="btn btn-outline btn-large w-100 mb-3" onclick="togglePausaTarea()" data-i18n="auto_dash_160">PAUSAR AHORA</button>
+                    <button type="button" class="btn-link text-style-10 w-100" style="text-align: center; display: block;" onclick="detenerTemporizador(); navegarA('pantalla-dashboard')" data-i18n="auto_dash_161">FINALIZAR SESIÓN</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pantalla-dashboard" class="view">
+            <h2 class="text-style-2" data-i18n="auto_dash_162">Dashboard de Monitoreo</h2>
+            <button class="btn btn-secondary btn-medium" onclick="navegarA('pantalla-login')" data-i18n="auto_dash_163">Cerrar Sesión</button>
+        </section>
+
+        <section id="pantalla-alerta" class="view">
+            <div class="mobile-container alert-container text-center">
+                
+                <div class="warning-icon text-warning-amber mb-3" data-i18n="auto_dash_164">⚠️</div>
+                <h1 class="text-style-2 mb-4" data-i18n="auto_dash_165">Tu concentración ha disminuido</h1>
+
+                <div class="stats-box mb-4">
+                    <div class="stat-row-alert">
+                        <span class="text-style-5" data-i18n="auto_dash_166">Nivel actual:</span>
+                        <span class="text-style-6 text-warning-amber" id="alert-nivel-actual" data-i18n="auto_dash_167">50%</span>
+                    </div>
+                    <div class="stat-row-alert mt-2">
+                        <span class="text-style-5" data-i18n="auto_dash_168">Antes:</span>
+                        <span class="text-style-6">100%</span>
+                    </div>
+                </div>
+
+                <p class="text-style-4 mb-4">
+                    Te recomendamos tomar una pausa de 10 minutos para recuperar energía
+                </p>
+
+                <div class="activity-card text-left mb-4">
+                    <p class="text-style-6 mb-2" data-i18n="auto_dash_169">Actividad sugerida:</p>
+                    <p class="text-style-4 mb-1" data-i18n="auto_dash_170">🧘 Respira profundo</p>
+                    <p class="text-style-8 text-muted" data-i18n="auto_dash_171">2 minutos</p>
+                </div>
+
+                <div class="action-buttons-stack w-100">
+                    <button type="button" class="btn btn-primary btn-large w-100 mb-3 flex-column" onclick="navegarA('pantalla-descanso')">
+                        <span data-i18n="auto_dash_172">TOMAR PAUSA</span>
+                        <span class="text-style-11 text-white" style="font-weight: 400;" data-i18n="auto_dash_173">10 MINUTOS</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-large w-100 mb-3" onclick="navegarA('pantalla-tarea')" data-i18n="auto_dash_174">CONTINUAR 5 MIN +</button>
+                    <button type="button" class="btn-link text-style-10 w-100" style="text-align: center; display: block;" onclick="navegarA('pantalla-tarea')" data-i18n="auto_dash_175">IGNORAR</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="pantalla-descanso" class="view">
+            <div class="mobile-container alert-container text-center">
+                
+                <h1 class="text-style-2 mb-4" data-i18n="auto_dash_176">Descansa ahora 🎧</h1>
+
+                <div class="timer-circle-wrapper mb-4">
+                    <div class="spinner-ring"></div>
+                    <div class="timer-text-overlay">
+                        <h1 id="break-timer-display" class="text-style-1" style="font-size: 48px;" data-i18n="auto_dash_177">00:00</h1>
+                    </div>
+                </div>
+
+                <div class="activity-card mb-4">
+                    <p class="text-style-6 mb-3 text-center" data-i18n="auto_dash_178">🎵 Reproduciendo música relajante</p>
+                    <div class="music-controls">
+                        <button class="btn btn-outline btn-small" onclick="mostrarToast('Función en desarrollo')" data-i18n="auto_dash_179"><span class="mr-2">⏸</span> PAUSAR</button>
+                        <button class="btn btn-outline btn-small" onclick="mostrarToast('Función en desarrollo')" data-i18n="auto_dash_180"><span class="mr-2">⏭</span> SIGUIENTE</button>
+                    </div>
+                </div>
+
+                <div class="tips-box text-left mb-4">
+                    <p class="text-style-6 mb-2" data-i18n="auto_dash_181">Mientras tanto:</p>
+                    <ul class="tips-list text-style-5">
+                        <li data-i18n="auto_dash_182">Estira tu cuello</li>
+                        <li data-i18n="auto_dash_183">Bebe agua</li>
+                        <li data-i18n="auto_dash_184">Respira profundo</li>
+                    </ul>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-large w-100 mt-2" onclick="navegarA('pantalla-tarea')" data-i18n="auto_dash_185">TERMINAR PAUSA</button>
+                
+            </div>
+        </section>
+        <div id="offline-modal" class="modal-overlay hidden">
+            <div class="modal-box text-center">
+                <p id="offline-modal-text" class="text-style-9 mb-4" style="text-transform: uppercase; line-height: 1.6;"></p>
+                <button class="btn btn-primary btn-large w-100" onclick="cerrarModal()" data-i18n="auto_dash_186">VOLVER</button>
+            </div>
+        </div>
+
+        <section id="pantalla-configuracion-padres" class="view">
+            <header class="top-bar">
+                <button class="icon-btn text-style-2" onclick="retroceder()">←</button>
+                <h2 class="text-style-3" style="margin-left: 8px; flex-grow: 1; text-align: left;" data-i18n="auto_dash_187">⚙️ Configuracion</h2>
+            </header>
+
+            <div class="mobile-container pt-0">
+                
+                <div class="mb-4 mt-3">
+                    <p class="text-style-8 mb-2" data-i18n="auto_dash_188">Eliminar Hijo</p>
+                    <input type="text" id="eliminar-hijo-nombre" class="form-control mb-3" data-i18n="dash_f_19" placeholder="Nombre">
+                    <button type="button" class="btn btn-danger btn-large w-100" style="padding: 14px;" onclick="eliminarHijo()" data-i18n="auto_dash_189">ELIMINAR HIJO</button>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-style-4 mb-3" data-i18n="auto_dash_190">Tamaño de letra</h3>
+                    
+                    <div class="activity-card" style="padding: 16px 20px;">
+                        <div class="font-size-option" onclick="cambiarTamanoLetra('small')">
+                            <span class="custom-radio-green" id="radio-small"></span>
+                            <span class="text-style-6" data-i18n="auto_dash_191">Pequeño</span>
+                        </div>
+                        
+                        <div class="font-size-option mt-3" onclick="cambiarTamanoLetra('medium')">
+                            <span class="custom-radio-green checked" id="radio-medium">✔</span>
+                            <span class="text-style-6" data-i18n="auto_dash_192">Mediano</span>
+                        </div>
+                        
+                        <div class="font-size-option mt-3" onclick="cambiarTamanoLetra('large')">
+                            <span class="custom-radio-green" id="radio-large"></span>
+                            <span class="text-style-6" data-i18n="auto_dash_193">Grande</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons-stack mt-5">
+                    <button type="button" class="btn btn-danger btn-large w-100 mb-3" onclick="navegarA('pantalla-login-padres')" data-i18n="auto_dash_194">CERRAR SESIÓN</button>
+                    <button type="button" class="btn btn-primary btn-large w-100" onclick="navegarA('pantalla-dashboard-padres')" data-i18n="auto_dash_195">VOLVER</button>
+                </div>
+
+            </div>
+            <div id="delete-success-modal" class="modal-overlay hidden">
+                <div class="modal-box text-center">
+                    <p id="delete-modal-text" class="text-style-9 mb-4" style="text-transform: uppercase; line-height: 1.6;"></p>
+                    <button class="btn btn-primary btn-large w-100" onclick="cerrarModalDelete()" data-i18n="auto_dash_196">VOLVER</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/dashboard.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const translations = {
+window.translations = {
     es: {
         nav_inicio: "Inicio",
         nav_problema: "El Problema",
@@ -50,7 +50,281 @@ const translations = {
         modal_contact_title: "Formulario de Contacto",
         modal_contact_desc: "¿Tienes preguntas sobre cómo ayudamos a tu hijo? Escríbenos.",
         modal_message: "Mensaje",
-        modal_contact_btn: "Enviar Mensaje →"
+        modal_contact_btn: "Enviar Mensaje →",
+        badge_bienestar: "BIENESTAR COGNITIVO",
+        badge_problema: "EL PROBLEMA",
+        badge_solucion: "LA SOLUCIÓN",
+        badge_dashboard: "DASHBOARD",
+        badge_padres: "PARA PADRES",
+        badge_compromiso: "NUESTRO COMPROMISO",
+        trust_1: "100% no invasivo",
+        trust_2: "Tiempo real",
+        trust_3: "Privacidad total",
+        dash_title: "Tu estado cognitivo, visible al instante",
+        dash_desc: "NeuroFocus transforma tus datos de comportamiento en métricas visuales claras. Comprende tu rendimiento de un vistazo.",
+        dash_note: "Vista previa simulada del panel de monitoreo en tiempo real.",
+        btn_comenzar: "¡Comenzar!",
+        dash_login_btn: "INGRESAR",
+        dash_recordarme: "Recordarme",
+        dash_olvidaste: "¿OLVIDASTE TU CONTRASEÑA?",
+        dash_crear_cuenta: "CREAR CUENTA",
+        dash_entrar_padre: "ENTRAR COMO PADRE",
+        auto_dash_1: "Panel de Estudiante",
+        auto_dash_2: "Correo:",
+        auto_dash_3: "Contraseña:",
+        auto_dash_4: "Panel de Padres",
+        auto_dash_5: "Correo:",
+        auto_dash_6: "Contraseña:",
+        auto_dash_7: "Cuéntanos de ti",
+        auto_dash_8: "Correo Electronico:",
+        auto_dash_9: "Contraseña:",
+        auto_dash_10: "Repetir Contraseña:",
+        auto_dash_11: "Acepto los terminos y condiciones",
+        auto_dash_12: "Acepto la politica de privacidad",
+        auto_dash_13: "Acepto el envio de material publicitario",
+        auto_dash_14: "CONTINUAR",
+        auto_dash_15: "Sobre tu hijo",
+        auto_dash_16: "Nombre:",
+        auto_dash_17: "Correo Electronico:",
+        auto_dash_18: "Edad:",
+        auto_dash_19: "Grado:",
+        auto_dash_20: "1ro Secundaria",
+        auto_dash_21: "2do Secundaria",
+        auto_dash_22: "3ro Secundaria",
+        auto_dash_23: "4to Secundaria",
+        auto_dash_24: "5to Secundaria",
+        auto_dash_25: "AGREGAR HIJO +",
+        auto_dash_26: "CONTINUAR",
+        auto_dash_27: "Panel Parental",
+        auto_dash_28: "EN",
+        auto_dash_29: "Modo Claro",
+        auto_dash_30: "Mis Hijos",
+        auto_dash_31: "+ AGREGAR HIJO",
+        auto_dash_32: "Nombre",
+        auto_dash_33: "Nombre Apellido",
+        auto_dash_34: "Edad - Grado",
+        auto_dash_35: "⚠️",
+        auto_dash_36: "FATIGA CRÍTICA",
+        auto_dash_37: "Tiempo: 1h 32m",
+        auto_dash_38: "Sin pausas: 47m",
+        auto_dash_39: "Concentración",
+        auto_dash_40: "25%",
+        auto_dash_41: "Crítico",
+        auto_dash_42: "⚠️",
+        auto_dash_43: "Alerta",
+        auto_dash_44: "Notificación Push recibida ahora",
+        auto_dash_45: "VER NOTIFICACIÓN",
+        auto_dash_46: "Alerta Crítica",
+        auto_dash_47: "Fatiga Crítica",
+        auto_dash_48: "Nombre - Ahora",
+        auto_dash_49: "25%",
+        auto_dash_50: "Concentración:",
+        auto_dash_51: "1 hora 32 minutos",
+        auto_dash_52: "Tiempo continuo:",
+        auto_dash_53: "Recomendación:",
+        auto_dash_54: "Tu hijo/a necesita tomar una pausa urgente de 15 min para recuperarse.",
+        auto_dash_55: "ENVIAR MENSAJE",
+        auto_dash_56: "A NOMBRE",
+        auto_dash_57: "LLAMAR",
+        auto_dash_58: "IGNORAR",
+        auto_dash_59: "Mensaje a Nombre",
+        auto_dash_60: "Elige un mensaje:",
+        auto_dash_61: "\"Hijo/a, veo que llevas mucho tiempo estudiando. Toma un descanso ❤️\"",
+        auto_dash_62: "\"Nombre, la app indica que necesitas descansar. Pausa de 15 min 💙\"",
+        auto_dash_63: "\"Hijo/a por favor recuerda tomarte descansos de vez en cuando que tambien importan\"",
+        auto_dash_64: "ENVIAR AHORA",
+        auto_dash_65: "Mensaje enviado",
+        auto_dash_66: "Nombre recibirá tu mensaje en su dispositivo.",
+        auto_dash_67: "VOLVER AL PANEL",
+        auto_dash_68: "Cuéntanos de ti",
+        auto_dash_69: "Correo Electronico:",
+        auto_dash_70: "Contraseña:",
+        auto_dash_71: "Repetir Contraseña:",
+        auto_dash_72: "Acepto los terminos y condiciones",
+        auto_dash_73: "Acepto la politica de privacidad",
+        auto_dash_74: "Acepto el envio de material publicitario",
+        auto_dash_75: "CONTINUAR",
+        auto_dash_76: "Cuéntanos de ti",
+        auto_dash_77: "Nombre:",
+        auto_dash_78: "Edad:",
+        auto_dash_79: "Grado:",
+        auto_dash_80: "1ro Secundaria",
+        auto_dash_81: "2do Secundaria",
+        auto_dash_82: "3ro Secundaria",
+        auto_dash_83: "4to Secundaria",
+        auto_dash_84: "5to Secundaria",
+        auto_dash_85: "¿Tus padres supervisarán?",
+        auto_dash_86: "Sí, compartir con mis padres",
+        auto_dash_87: "CONTINUAR",
+        auto_dash_88: "Bienvenido a NeuroFocus",
+        auto_dash_89: "Estudiante feliz",
+        auto_dash_90: "SIGUIENTE",
+        auto_dash_91: "SALTAR",
+        auto_dash_92: "¿Cómo funciona?",
+        auto_dash_93: "Cerebro + IA",
+        auto_dash_94: "ATRÁS",
+        auto_dash_95: "SIGUIENTE",
+        auto_dash_96: "Te avisamos 📱",
+        auto_dash_97: "Notificación",
+        auto_dash_98: "ATRÁS",
+        auto_dash_99: "SIGUIENTE",
+        auto_dash_100: "Tu progreso 📊",
+        auto_dash_101: "Gráfico",
+        auto_dash_102: "COMENZAR",
+        auto_dash_103: "ATRÁS",
+        auto_dash_104: "EN",
+        auto_dash_105: "Modo Claro",
+        auto_dash_106: "¡Hola, Diego! 👋",
+        auto_dash_107: "\"Cada desafío que resuelves te convierte en un mejor ingeniero de software. ¡Mantén el enfoque!\"",
+        auto_dash_108: "Tu Estado",
+        auto_dash_109: "Óptimo",
+        auto_dash_110: "Listo para estudiar",
+        auto_dash_111: "¿Listo para tu primera sesión?",
+        auto_dash_112: "EMPEZAR TAREA",
+        auto_dash_113: "VER TUTORIAL",
+        auto_dash_114: "CONFIGURACIÓN",
+        auto_dash_115: "⚙️ Configuracion",
+        auto_dash_116: "Informe Semanal",
+        auto_dash_117: "VER INFORME SEMANAL",
+        auto_dash_118: "Agregar Padre:",
+        auto_dash_119: "AGREGAR PADRE +",
+        auto_dash_120: "Padres:",
+        auto_dash_121: "No hay padres registrados",
+        auto_dash_122: "CERRAR SESIÓN",
+        auto_dash_123: "VOLVER",
+        auto_dash_124: "Diego 📊",
+        auto_dash_125: "Semana: 5-11 Mayo",
+        auto_dash_126: "Diego",
+        auto_dash_127: "Horas totales",
+        auto_dash_128: "11.5h",
+        auto_dash_129: "Sesiones por día:",
+        auto_dash_130: "Lun",
+        auto_dash_131: "2h",
+        auto_dash_132: "Mar",
+        auto_dash_133: "1.5h",
+        auto_dash_134: "Mie",
+        auto_dash_135: "3h",
+        auto_dash_136: "Jue",
+        auto_dash_137: "2h",
+        auto_dash_138: "Vie",
+        auto_dash_139: "1.5h",
+        auto_dash_140: "Sab",
+        auto_dash_141: "2h",
+        auto_dash_142: "Dom",
+        auto_dash_143: "0h",
+        auto_dash_144: "Estado General: Saludable",
+        auto_dash_145: "1 alerta crítica (Miércoles 8pm)",
+        auto_dash_146: "Pausas tomadas: 8",
+        auto_dash_147: "Adherencia: 67%",
+        auto_dash_148: "COMPARTIR",
+        auto_dash_149: "Sesión Activa",
+        auto_dash_150: "⏱️",
+        auto_dash_151: "00:00:00",
+        auto_dash_152: "Tiempo estudiando",
+        auto_dash_153: "CONCENTRACIÓN",
+        auto_dash_154: "Normal",
+        auto_dash_155: "Velocidad tecleo",
+        auto_dash_156: "0 kpm",
+        auto_dash_157: "Tasa de errores",
+        auto_dash_158: "4%",
+        auto_dash_159: "Pausas: 0",
+        auto_dash_160: "PAUSAR AHORA",
+        auto_dash_161: "FINALIZAR SESIÓN",
+        auto_dash_162: "Dashboard de Monitoreo",
+        auto_dash_163: "Cerrar Sesión",
+        auto_dash_164: "⚠️",
+        auto_dash_165: "Tu concentración ha disminuido",
+        auto_dash_166: "Nivel actual:",
+        auto_dash_167: "50%",
+        auto_dash_168: "Antes:",
+        auto_dash_169: "Actividad sugerida:",
+        auto_dash_170: "🧘 Respira profundo",
+        auto_dash_171: "2 minutos",
+        auto_dash_172: "TOMAR PAUSA",
+        auto_dash_173: "10 MINUTOS",
+        auto_dash_174: "CONTINUAR 5 MIN +",
+        auto_dash_175: "IGNORAR",
+        auto_dash_176: "Descansa ahora 🎧",
+        auto_dash_177: "00:00",
+        auto_dash_178: "🎵 Reproduciendo música relajante",
+        auto_dash_179: "PAUSAR",
+        auto_dash_180: "SIGUIENTE",
+        auto_dash_181: "Mientras tanto:",
+        auto_dash_182: "Estira tu cuello",
+        auto_dash_183: "Bebe agua",
+        auto_dash_184: "Respira profundo",
+        auto_dash_185: "TERMINAR PAUSA",
+        auto_dash_186: "VOLVER",
+        auto_dash_187: "⚙️ Configuracion",
+        auto_dash_188: "Eliminar Hijo",
+        auto_dash_189: "ELIMINAR HIJO",
+        auto_dash_190: "Tamaño de letra",
+        auto_dash_191: "Pequeño",
+        auto_dash_192: "Mediano",
+        auto_dash_193: "Grande",
+        auto_dash_194: "CERRAR SESIÓN",
+        auto_dash_195: "VOLVER",
+        auto_dash_196: "VOLVER",
+        auto_idx_1: "NeuroFocus - Estudia más inteligente",
+        auto_idx_2: "EN",
+        auto_idx_3: "Modo Claro",
+        auto_idx_4: "67.7%",
+        auto_idx_5: "↑ Errores",
+        auto_idx_6: "↓ Retención",
+        auto_idx_7: "01",
+        auto_idx_8: "Monitoreo pasivo de patrones de interacción y tiempos de respuesta.",
+        auto_idx_9: "02",
+        auto_idx_10: "Evaluación continua de tu dinámica de escritura y eficiencia cognitiva.",
+        auto_idx_11: "03",
+        auto_idx_12: "Notificaciones preventivas antes de que la fatiga sea crítica.",
+        auto_idx_13: "04",
+        auto_idx_14: "Adaptación inteligente basada en tu estado cognitivo actual.",
+        auto_idx_15: "Nivel de Concentración",
+        auto_idx_16: "Óptimo",
+        auto_idx_17: "78%",
+        auto_idx_18: "Fatiga Detectada",
+        auto_idx_19: "Moderado",
+        auto_idx_20: "35%",
+        auto_idx_21: "Tasa de Errores",
+        auto_idx_22: "Normal",
+        auto_idx_23: "12%",
+        auto_idx_24: "Tiempo de Sesión",
+        auto_idx_25: "Pausa sugerida",
+        auto_idx_26: "1h 35min",
+        auto_idx_27: "Datos reales, tranquilidad verdadera.",
+        auto_idx_28: "NeuroFocus muestra exactamente cuándo tu hijo se concentra y cuándo necesita apoyo.",
+        auto_idx_29: "Reportes de concentración diaria",
+        auto_idx_30: "Comparativas de reporte semanal",
+        auto_idx_31: "Historial de sesiones completadas",
+        auto_idx_32: "&times;",
+        dash_f_1: "tu@email.com",
+        dash_f_2: "••••••••",
+        dash_f_3: "tu@email.com",
+        dash_f_4: "••••••••",
+        dash_f_5: "Tu Correo",
+        dash_f_6: "Contraseña",
+        dash_f_7: "Contraseña",
+        dash_f_8: "Nombre del hijo",
+        dash_f_9: "Correo",
+        dash_f_10: "14",
+        dash_f_11: "Tu correo",
+        dash_f_12: "Contraseña",
+        dash_f_13: "Contraseña",
+        dash_f_14: "Tu nombre",
+        dash_f_15: "14",
+        dash_f_16: "tu@email.com",
+        dash_f_17: "Ingresar Correo",
+        dash_f_18: "Nombre del padre",
+        dash_f_19: "Nombre",
+        dash_f_20: "ES",
+        dash_f_21: "ES",
+        dash_f_22: "EN",
+        dash_f_23: "EN",
+        "Menú lateral en construcción": "Menú lateral en construcción",
+        "No tienes notificaciones nuevas": "No tienes notificaciones nuevas",
+        "Enlace enviado. Revisa tu bandeja.": "Enlace enviado. Revisa tu bandeja.",
+        "Función en desarrollo": "Función en desarrollo",
+        dash_entrar_estudiante: "ENTRAR COMO ESTUDIANTE"
     },
     en: {
         nav_inicio: "Home",
@@ -103,18 +377,317 @@ const translations = {
         modal_contact_title: "Contact Form",
         modal_contact_desc: "Have questions about how we help your child? Write to us.",
         modal_message: "Message",
-        modal_contact_btn: "Send Message →"
+        modal_contact_btn: "Send Message →",
+        badge_bienestar: "COGNITIVE WELLNESS",
+        badge_problema: "THE PROBLEM",
+        badge_solucion: "THE SOLUTION",
+        badge_dashboard: "DASHBOARD",
+        badge_padres: "FOR PARENTS",
+        badge_compromiso: "OUR COMMITMENT",
+        trust_1: "100% non-invasive",
+        trust_2: "Real-time",
+        trust_3: "Total privacy",
+        dash_title: "Your cognitive state, visible instantly",
+        dash_desc: "NeuroFocus transforms your behavioral data into clear visual metrics. Understand your performance at a glance.",
+        dash_note: "Simulated preview of the real-time monitoring panel.",
+        btn_comenzar: "Start!",
+        dash_login_btn: "LOG IN",
+        dash_recordarme: "Remember me",
+        dash_olvidaste: "FORGOT YOUR PASSWORD?",
+        dash_crear_cuenta: "CREATE ACCOUNT",
+        dash_entrar_padre: "LOG IN AS PARENT",
+        auto_dash_1: "Student Panel",
+        auto_dash_2: "Email:",
+        auto_dash_3: "Password:",
+        auto_dash_4: "Parent Panel",
+        auto_dash_5: "Email:",
+        auto_dash_6: "Password:",
+        auto_dash_7: "Tell us about yourself",
+        auto_dash_8: "Email Address:",
+        auto_dash_9: "Password:",
+        auto_dash_10: "Repeat Password:",
+        auto_dash_11: "I accept the terms and conditions",
+        auto_dash_12: "I accept the privacy policy",
+        auto_dash_13: "I accept receiving promotional material",
+        auto_dash_14: "CONTINUE",
+        auto_dash_15: "About your child",
+        auto_dash_16: "Name:",
+        auto_dash_17: "Email Address:",
+        auto_dash_18: "Age:",
+        auto_dash_19: "Grade:",
+        auto_dash_20: "1st Grade",
+        auto_dash_21: "2nd Grade",
+        auto_dash_22: "3rd Grade",
+        auto_dash_23: "4th Grade",
+        auto_dash_24: "5th Grade",
+        auto_dash_25: "ADD CHILD +",
+        auto_dash_26: "CONTINUE",
+        auto_dash_27: "Parental Panel",
+        auto_dash_28: "EN",
+        auto_dash_29: "Light Mode",
+        auto_dash_30: "My Children",
+        auto_dash_31: "+ ADD CHILD",
+        auto_dash_32: "Nombre",
+        auto_dash_33: "First Last Name",
+        auto_dash_34: "Age - Grade",
+        auto_dash_35: "⚠️",
+        auto_dash_36: "CRITICAL FATIGUE",
+        auto_dash_37: "Tiempo: 1h 32m",
+        auto_dash_38: "No breaks: 47m",
+        auto_dash_39: "Concentration",
+        auto_dash_40: "25%",
+        auto_dash_41: "Critical",
+        auto_dash_42: "⚠️",
+        auto_dash_43: "Alert",
+        auto_dash_44: "Push notification received now",
+        auto_dash_45: "VIEW NOTIFICATION",
+        auto_dash_46: "Critical Alert",
+        auto_dash_47: "Critical Fatigue",
+        auto_dash_48: "Name - Now",
+        auto_dash_49: "25%",
+        auto_dash_50: "Concentration:",
+        auto_dash_51: "1 hora 32 minutos",
+        auto_dash_52: "Continuous time:",
+        auto_dash_53: "Recommendation:",
+        auto_dash_54: "Your child needs to take an urgent 15 min break to recover.",
+        auto_dash_55: "SEND MESSAGE",
+        auto_dash_56: "A NOMBRE",
+        auto_dash_57: "CALL",
+        auto_dash_58: "IGNORE",
+        auto_dash_59: "Message to Name",
+        auto_dash_60: "Choose a message:",
+        auto_dash_61: "\"Hijo/a, veo que llevas mucho tiempo estudiando. Toma un descanso ❤️\"",
+        auto_dash_62: "\"Nombre, la app indica que necesitas descansar. Pausa de 15 min 💙\"",
+        auto_dash_63: "\"Hijo/a por favor recuerda tomarte descansos de vez en cuando que tambien importan\"",
+        auto_dash_64: "SEND NOW",
+        auto_dash_65: "Message sent",
+        auto_dash_66: "Name will receive your message on their device.",
+        auto_dash_67: "BACK TO PANEL",
+        auto_dash_68: "Tell us about yourself",
+        auto_dash_69: "Email Address:",
+        auto_dash_70: "Password:",
+        auto_dash_71: "Repeat Password:",
+        auto_dash_72: "I accept the terms and conditions",
+        auto_dash_73: "I accept the privacy policy",
+        auto_dash_74: "I accept receiving promotional material",
+        auto_dash_75: "CONTINUE",
+        auto_dash_76: "Tell us about yourself",
+        auto_dash_77: "Name:",
+        auto_dash_78: "Age:",
+        auto_dash_79: "Grade:",
+        auto_dash_80: "1st Grade",
+        auto_dash_81: "2nd Grade",
+        auto_dash_82: "3rd Grade",
+        auto_dash_83: "4th Grade",
+        auto_dash_84: "5th Grade",
+        auto_dash_85: "Will your parents supervise?",
+        auto_dash_86: "Yes, share with my parents",
+        auto_dash_87: "CONTINUE",
+        auto_dash_88: "Welcome to NeuroFocus",
+        auto_dash_89: "Happy student",
+        auto_dash_90: "NEXT",
+        auto_dash_91: "SKIP",
+        auto_dash_92: "How does it work?",
+        auto_dash_93: "Brain + AI",
+        auto_dash_94: "BACK",
+        auto_dash_95: "NEXT",
+        auto_dash_96: "We notify you 📱",
+        auto_dash_97: "Notification",
+        auto_dash_98: "BACK",
+        auto_dash_99: "NEXT",
+        auto_dash_100: "Your progress 📊",
+        auto_dash_101: "Graph",
+        auto_dash_102: "START",
+        auto_dash_103: "BACK",
+        auto_dash_104: "EN",
+        auto_dash_105: "Light Mode",
+        auto_dash_106: "Hello, Diego! 👋",
+        auto_dash_107: "\"Cada desafío que resuelves te convierte en un mejor ingeniero de software. ¡Mantén el enfoque!\"",
+        auto_dash_108: "Your Status",
+        auto_dash_109: "Optimal",
+        auto_dash_110: "Ready to study",
+        auto_dash_111: "Ready for your first session?",
+        auto_dash_112: "START TASK",
+        auto_dash_113: "VIEW TUTORIAL",
+        auto_dash_114: "SETTINGS",
+        auto_dash_115: "⚙️ Settings",
+        auto_dash_116: "Weekly Report",
+        auto_dash_117: "VIEW WEEKLY REPORT",
+        auto_dash_118: "Add Parent:",
+        auto_dash_119: "ADD PARENT +",
+        auto_dash_120: "Parents:",
+        auto_dash_121: "No registered parents",
+        auto_dash_122: "LOG OUT",
+        auto_dash_123: "BACK",
+        auto_dash_124: "Diego 📊",
+        auto_dash_125: "Semana: 5-11 Mayo",
+        auto_dash_126: "Diego",
+        auto_dash_127: "Total hours",
+        auto_dash_128: "11.5h",
+        auto_dash_129: "Sessions per day:",
+        auto_dash_130: "Mon",
+        auto_dash_131: "2h",
+        auto_dash_132: "Tue",
+        auto_dash_133: "1.5h",
+        auto_dash_134: "Wed",
+        auto_dash_135: "3h",
+        auto_dash_136: "Thu",
+        auto_dash_137: "2h",
+        auto_dash_138: "Fri",
+        auto_dash_139: "1.5h",
+        auto_dash_140: "Sat",
+        auto_dash_141: "2h",
+        auto_dash_142: "Sun",
+        auto_dash_143: "0h",
+        auto_dash_144: "Overall Status: Healthy",
+        auto_dash_145: "1 critical alert (Wednesday 8pm)",
+        auto_dash_146: "Breaks taken: 8",
+        auto_dash_147: "Adherence: 67%",
+        auto_dash_148: "SHARE",
+        auto_dash_149: "Active Session",
+        auto_dash_150: "⏱️",
+        auto_dash_151: "00:00:00",
+        auto_dash_152: "Study Time",
+        auto_dash_153: "CONCENTRATION",
+        auto_dash_154: "Normal",
+        auto_dash_155: "Typing speed",
+        auto_dash_156: "0 kpm",
+        auto_dash_157: "Error rate",
+        auto_dash_158: "4%",
+        auto_dash_159: "Breaks: 0",
+        auto_dash_160: "PAUSE NOW",
+        auto_dash_161: "END SESSION",
+        auto_dash_162: "Monitoring Dashboard",
+        auto_dash_163: "Log Out",
+        auto_dash_164: "⚠️",
+        auto_dash_165: "Your concentration has dropped",
+        auto_dash_166: "Current level:",
+        auto_dash_167: "50%",
+        auto_dash_168: "Before:",
+        auto_dash_169: "Suggested activity:",
+        auto_dash_170: "🧘 Take a deep breath",
+        auto_dash_171: "2 minutes",
+        auto_dash_172: "TAKE A BREAK",
+        auto_dash_173: "10 MINUTES",
+        auto_dash_174: "CONTINUE 5 MIN +",
+        auto_dash_175: "IGNORE",
+        auto_dash_176: "Rest now 🎧",
+        auto_dash_177: "00:00",
+        auto_dash_178: "🎵 Playing relaxing music",
+        auto_dash_179: "PAUSE",
+        auto_dash_180: "NEXT",
+        auto_dash_181: "Meanwhile:",
+        auto_dash_182: "Stretch your neck",
+        auto_dash_183: "Drink water",
+        auto_dash_184: "Breathe deeply",
+        auto_dash_185: "END BREAK",
+        auto_dash_186: "BACK",
+        auto_dash_187: "⚙️ Settings",
+        auto_dash_188: "Remove Child",
+        auto_dash_189: "REMOVE CHILD",
+        auto_dash_190: "Font size",
+        auto_dash_191: "Small",
+        auto_dash_192: "Medium",
+        auto_dash_193: "Large",
+        auto_dash_194: "LOG OUT",
+        auto_dash_195: "BACK",
+        auto_dash_196: "BACK",
+        auto_idx_1: "NeuroFocus - Estudia más inteligente",
+        auto_idx_2: "EN",
+        auto_idx_3: "Light Mode",
+        auto_idx_4: "67.7%",
+        auto_idx_5: "↑ Errors",
+        auto_idx_6: "↓ Retention",
+        auto_idx_7: "01",
+        auto_idx_8: "Passive monitoring of interaction patterns and response times.",
+        auto_idx_9: "02",
+        auto_idx_10: "Continuous evaluation of your typing dynamics and cognitive efficiency.",
+        auto_idx_11: "03",
+        auto_idx_12: "Preventive notifications before fatigue becomes critical.",
+        auto_idx_13: "04",
+        auto_idx_14: "Intelligent adaptation based on your current cognitive state.",
+        auto_idx_15: "Concentration Level",
+        auto_idx_16: "Optimal",
+        auto_idx_17: "78%",
+        auto_idx_18: "Detected Fatigue",
+        auto_idx_19: "Moderate",
+        auto_idx_20: "35%",
+        auto_idx_21: "Error Rate",
+        auto_idx_22: "Normal",
+        auto_idx_23: "12%",
+        auto_idx_24: "Session Time",
+        auto_idx_25: "Break suggested",
+        auto_idx_26: "1h 35min",
+        auto_idx_27: "Datos reales, tranquilidad verdadera.",
+        auto_idx_28: "NeuroFocus muestra exactamente cuándo tu hijo se concentra y cuándo necesita apoyo.",
+        auto_idx_29: "Daily concentration reports",
+        auto_idx_30: "Weekly report comparisons",
+        auto_idx_31: "Completed sessions history",
+        auto_idx_32: "&times;",
+        dash_f_1: "your@email.com",
+        dash_f_2: "••••••••",
+        dash_f_3: "your@email.com",
+        dash_f_4: "••••••••",
+        dash_f_5: "Your Email",
+        dash_f_6: "Password",
+        dash_f_7: "Password",
+        dash_f_8: "Child's Name",
+        dash_f_9: "Email",
+        dash_f_10: "14",
+        dash_f_11: "Your email",
+        dash_f_12: "Password",
+        dash_f_13: "Password",
+        dash_f_14: "Your name",
+        dash_f_15: "14",
+        dash_f_16: "your@email.com",
+        dash_f_17: "Enter Email",
+        dash_f_18: "Parent's Name",
+        dash_f_19: "Name",
+        dash_f_20: "ES",
+        dash_f_21: "ES",
+        dash_f_22: "EN",
+        dash_f_23: "EN",
+        "Menú lateral en construcción": "Sidebar under construction",
+        "No tienes notificaciones nuevas": "No new notifications",
+        "Enlace enviado. Revisa tu bandeja.": "Link sent. Check your inbox.",
+        "Función en desarrollo": "Feature in development",
+        dash_entrar_estudiante: "LOG IN AS STUDENT"
     }
 };
 
-let currentLang = 'es';
-
 document.addEventListener('DOMContentLoaded', function () {
-    
-    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuButton.addEventListener('click', function () {
+
+    // Theme logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    let currentTheme = localStorage.getItem('theme') || 'dark';
+
+    function applyTheme(theme) {
+        let currentLang = localStorage.getItem('lang') || 'es';
+        const isEn = currentLang === 'en';
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if(themeToggleBtn) themeToggleBtn.textContent = isEn ? 'Dark Mode' : 'Modo Oscuro';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if(themeToggleBtn) themeToggleBtn.textContent = isEn ? 'Light Mode' : 'Modo Claro';
+        }
+    }
+    applyTheme(currentTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
+        });
+    }
+
+    // i18n logic
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    mobileMenuBtn.addEventListener('click', function () {
         mobileMenu.classList.toggle('hidden');
     });
 
@@ -125,68 +698,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const loginModal = document.getElementById('login-modal');
-    const registerModal = document.getElementById('register-modal');
-    const passwordModal = document.getElementById('password-modal');
     const contactModal = document.getElementById('contact-modal');
-
-    const openLoginBtn = document.getElementById('open-login-button');
-    const openRegisterBtn = document.getElementById('open-register-button');
-    const openRegisterBtn2 = document.getElementById('open-register-button-2');
-    const openPasswordLink = document.getElementById('open-password-link');
     const openContactBtn = document.getElementById('open-contact-button');
-
-    const openLoginBtnMobile = document.getElementById('open-login-button-mobile');
-    const openRegisterBtnMobile = document.getElementById('open-register-button-mobile');
-
-    const closeLoginBtn = document.getElementById('close-login-modal');
-    const closeRegisterBtn = document.getElementById('close-register-modal');
-    const closePasswordBtn = document.getElementById('close-password-modal');
     const closeContactBtn = document.getElementById('close-contact-modal');
 
-    const gotoRegisterLink = document.getElementById('open-register-link');
-    const gotoLoginLink = document.getElementById('open-login-link');
-    const backToLoginLink = document.getElementById('back-to-login-link');
 
     function hideAllModals() {
-        loginModal.classList.add('hidden');
-        registerModal.classList.add('hidden');
-        passwordModal.classList.add('hidden');
         contactModal.classList.add('hidden');
     }
 
-    openLoginBtn.addEventListener('click', function(e) { e.preventDefault(); showLoginModal(); });
-    openRegisterBtn.addEventListener('click', function(e) { e.preventDefault(); showRegisterModal(); });
-    openRegisterBtn2.addEventListener('click', function(e) { e.preventDefault(); showRegisterModal(); });
-    openPasswordLink.addEventListener('click', function(e) { e.preventDefault(); showPasswordModal(); });
     openContactBtn.addEventListener('click', function(e) { e.preventDefault(); showContactModal(); });
 
-    openLoginBtnMobile.addEventListener('click', function(e) { 
-        e.preventDefault(); 
-        mobileMenu.classList.add('hidden'); 
-        showLoginModal(); 
-    });
-    openRegisterBtnMobile.addEventListener('click', function(e) { 
-        e.preventDefault(); 
-        mobileMenu.classList.add('hidden'); 
-        showRegisterModal(); 
-    });
-
-    function showLoginModal() { hideAllModals(); loginModal.classList.remove('hidden'); }
-    function showRegisterModal() { hideAllModals(); registerModal.classList.remove('hidden'); }
-    function showPasswordModal() { hideAllModals(); passwordModal.classList.remove('hidden'); }
     function showContactModal() { hideAllModals(); contactModal.classList.remove('hidden'); }
 
-    closeLoginBtn.addEventListener('click', hideAllModals);
-    closeRegisterBtn.addEventListener('click', hideAllModals);
-    closePasswordBtn.addEventListener('click', hideAllModals);
     closeContactBtn.addEventListener('click', hideAllModals);
 
-    gotoRegisterLink.addEventListener('click', function(e) { e.preventDefault(); showRegisterModal(); });
-    gotoLoginLink.addEventListener('click', function(e) { e.preventDefault(); showLoginModal(); });
-    backToLoginLink.addEventListener('click', function(e) { e.preventDefault(); showLoginModal(); });
-
-    const listaModales = [loginModal, registerModal, passwordModal, contactModal];
+    const listaModales = [contactModal];
     listaModales.forEach(function (modalElement) {
         modalElement.addEventListener('click', function (e) {
             if (e.target === modalElement) {
@@ -195,30 +722,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    const passwordForm = document.getElementById('password-form');
     const contactForm = document.getElementById('contact-form');
-    
-    const passwordMessage = document.getElementById('password-message');
     const contactMessage = document.getElementById('contact-message');
-
-    loginForm.addEventListener('submit', function (e) {
-        e.preventDefault(); 
-        window.location.href = 'dashboard.html';
-    });
-    
-    registerForm.addEventListener('submit', function (e) {
-        e.preventDefault(); 
-        window.location.href = 'dashboard.html';
-    });
-    
-    passwordForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        passwordMessage.textContent = currentLang === 'es' ? '¡Enlace enviado (Simulación)!' : 'Link sent (Simulation)!';
-        passwordMessage.classList.remove('hidden');
-        setTimeout(hideAllModals, 2000);
-    });
 
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -228,19 +733,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const langToggleBtn = document.getElementById('lang-toggle');
-
-    langToggleBtn.addEventListener('click', function() {
-        currentLang = currentLang === 'es' ? 'en' : 'es';
+    if (langToggleBtn) {
         langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-        updateLanguage();
-    });
+        langToggleBtn.addEventListener('click', function() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            localStorage.setItem('lang', currentLang);
+            langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            updateLanguage();
+        });
+    }
 
     function updateLanguage() {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(function (element) {
             const key = element.getAttribute('data-i18n'); 
-            if (translations[currentLang][key]) {
-                element.textContent = translations[currentLang][key];
+            if (window.translations[currentLang] && window.translations[currentLang][key]) {
+                if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                    element.placeholder = window.translations[currentLang][key];
+                } else {
+                    element.textContent = window.translations[currentLang][key];
+                }
             }
         });
 
@@ -248,5 +760,9 @@ document.addEventListener('DOMContentLoaded', function () {
         emailInputs.forEach(function (input) {
             input.placeholder = currentLang === 'es' ? 'tu@correo.com' : 'you@email.com';
         });
+        
+        applyTheme(localStorage.getItem('theme') || 'dark');
     }
+
+    updateLanguage();
 });
