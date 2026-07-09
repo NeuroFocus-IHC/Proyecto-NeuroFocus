@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFocus - Estudia más inteligente</title>
+    <meta name="description" content="NeuroFocus monitorea tu fatiga cognitiva en tiempo real. Estudia de forma inteligente, protege tu salud mental y mejora tu rendimiento académico.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body class="bg-dark">
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/images/neurofocus-logo.png" alt="Logo NeuroFocus" class="navbar-logo-img">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#home" data-i18n="nav_inicio">Inicio</a>
+                <span class="nav-separator">|</span>
+                <a href="#problema" data-i18n="nav_problema">El Problema</a>
+                <span class="nav-separator">|</span>
+                <a href="#como-funciona" data-i18n="nav_como">¿Cómo funciona?</a>
+                <span class="nav-separator">|</span>
+                <a href="#padres" data-i18n="nav_padres">Padres</a>
+                <span class="nav-separator">|</span>
+                <a href="#sobre-nosotros" data-i18n="nav_nosotros">Sobre Nosotros</a>
+            </div>
+
+            <div class="nav-buttons">
+                <button id="lang-toggle" class="lang-btn text-white">EN</button> 
+                <button id="open-register-button" class="button-white" data-i18n="btn_signup">Registrarse</button>
+                <button id="open-login-button" class="button-cyan" data-i18n="btn_login">Iniciar sesión</button>
+            </div>
+            
+            <button id="mobile-menu-button" class="menu-toggle text-white">☰</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="#home" class="mobile-link" data-i18n="nav_inicio">Inicio</a>
+        <a href="#problema" class="mobile-link" data-i18n="nav_problema">El Problema</a>
+        <a href="#como-funciona" class="mobile-link" data-i18n="nav_como">¿Cómo funciona?</a>
+        <a href="#padres" class="mobile-link" data-i18n="nav_padres">Padres</a>
+        <a href="#sobre-nosotros" class="mobile-link" data-i18n="nav_nosotros">Sobre Nosotros</a>
+        <button id="open-register-button-mobile" class="button-white" data-i18n="btn_signup">Registrarse</button>
+        <button id="open-login-button-mobile" class="button-cyan" data-i18n="btn_login">Iniciar sesión</button>
+    </div>
+
+    <div class="container">
+        
+        <!-- ===================== HERO: Propuesta de Valor ===================== -->
+        <section class="hero-section" id="home">
+            <div class="hero-image">
+                <img src="assets/images/image1.png" alt="Estudiante usando NeuroFocus">
+            </div>
+            <div class="hero-text">
+                <span class="section-badge">BIENESTAR COGNITIVO</span>
+                <h1 class="title-main text-white" data-i18n="hero_title">Estudia más inteligente, <br>no más exhausto</h1>
+                <p class="text-light hero-subtitle" data-i18n="hero_desc">Monitorea tu fatiga cognitiva en tiempo real mientras estudias. Conoce tus límites reales, mejora tu concentración y tómate un respiro sin sentir culpa.</p>
+                <div class="hero-actions">
+                    <button id="open-register-button-2" class="button-green btn-large" data-i18n="hero_btn">Comenzar Monitoreo →</button>
+                    <a href="#como-funciona" class="button-outline" data-i18n="hero_btn_secondary">Ver cómo funciona</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-dot dot-green"></span>
+                        <span class="trust-text">100% no invasivo</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-dot dot-cyan"></span>
+                        <span class="trust-text">Tiempo real</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-dot dot-green"></span>
+                        <span class="trust-text">Privacidad total</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- ===================== PROBLEMA: Evidencia con datos ===================== -->
+        <section class="problemas-section" id="problema">
+            <span class="section-badge section-badge-center">EL PROBLEMA</span>
+            <div class="grid-problemas">
+                <div class="card-beige">
+                    <div class="card-stat">67.7%</div>
+                    <p data-i18n="prob_1">de los estudiantes universitarios sufre de agotamiento emocional severo.</p>
+                    <img src="assets/images/image2.png" alt="Agotamiento">
+                </div>
+                <div class="card-beige">
+                    <div class="card-stat">↑ Errores</div>
+                    <p data-i18n="prob_2">Tu tasa de errores de escritura aumenta en la madrugada sin que lo notes.</p>
+                    <img src="assets/images/image3.png" alt="Errores madrugada">
+                </div>
+                <div class="card-beige">
+                    <div class="card-stat">↓ Retención</div>
+                    <p data-i18n="prob_3">Estudiar fatigado reduce drásticamente tu capacidad de retención.</p>
+                    <img src="assets/images/image4.png" alt="Retención">
+                </div>
+            </div>
+            <h2 class="title-section text-center text-white" data-i18n="prob_title">Entonces, ¿Qué se puede hacer al respecto?</h2>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- ===================== CÓMO FUNCIONA: Beneficios con iconografía ===================== -->
+        <section id="como-funciona" class="como-section">
+            <span class="section-badge section-badge-center">LA SOLUCIÓN</span>
+            <h2 class="title-section text-center text-white" data-i18n="como_title">¿Cómo funciona?</h2>
+            <p class="text-center text-light descripcion-general" data-i18n="como_desc">NeuroFocus analiza tu comportamiento digital para detectar cuándo tu atención se dispersa. Todo ocurre en tiempo real, sin hardware adicional.</p>
+            
+            <div class="grid-funciones">
+                <div class="card-transparente">
+                    <div class="feature-step">01</div>
+                    <h3 data-i18n="func_1">Seguimiento de concentración en tiempo real</h3>
+                    <p class="feature-desc">Monitoreo pasivo de patrones de interacción y tiempos de respuesta.</p>
+                    <img src="assets/images/image5.png" alt="Seguimiento">
+                </div>
+                <div class="card-transparente">
+                    <div class="feature-step">02</div>
+                    <h3 data-i18n="func_2">Análisis de desempeño</h3>
+                    <p class="feature-desc">Evaluación continua de tu dinámica de escritura y eficiencia cognitiva.</p>
+                    <img src="assets/images/image6.png" alt="Análisis">
+                </div>
+                <div class="card-transparente">
+                    <div class="feature-step">03</div>
+                    <h3 data-i18n="func_3">Alertas inteligentes</h3>
+                    <p class="feature-desc">Notificaciones preventivas antes de que la fatiga sea crítica.</p>
+                    <img src="assets/images/image7.png" alt="Alertas">
+                </div>
+                <div class="card-transparente">
+                    <div class="feature-step">04</div>
+                    <h3 data-i18n="func_4">Ajuste automático del ritmo</h3>
+                    <p class="feature-desc">Adaptación inteligente basada en tu estado cognitivo actual.</p>
+                    <img src="assets/images/image8.png" alt="Ajuste">
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- ===================== MÉTRICAS: Visualización del estado del sistema ===================== -->
+        <section id="metricas" class="metricas-section">
+            <span class="section-badge section-badge-center">DASHBOARD</span>
+            <h2 class="title-section text-center text-white">Tu estado cognitivo, visible al instante</h2>
+            <p class="text-center text-light descripcion-general">NeuroFocus transforma tus datos de comportamiento en métricas visuales claras. Comprende tu rendimiento de un vistazo.</p>
+
+            <div class="metrics-dashboard">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-dot dot-green"></span>
+                        <span class="metric-label">Nivel de Concentración</span>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-bar metric-bar-high" style="width: 78%"></div>
+                    </div>
+                    <div class="metric-value">78% <span class="metric-status status-good">Óptimo</span></div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-dot dot-amber"></span>
+                        <span class="metric-label">Fatiga Detectada</span>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-bar metric-bar-medium" style="width: 35%"></div>
+                    </div>
+                    <div class="metric-value">35% <span class="metric-status status-ok">Moderado</span></div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-dot dot-green"></span>
+                        <span class="metric-label">Tasa de Errores</span>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-bar metric-bar-low" style="width: 12%"></div>
+                    </div>
+                    <div class="metric-value">12% <span class="metric-status status-good">Normal</span></div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-dot dot-cyan"></span>
+                        <span class="metric-label">Tiempo de Sesión</span>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-bar metric-bar-high" style="width: 65%"></div>
+                    </div>
+                    <div class="metric-value">1h 35min <span class="metric-status status-ok">Pausa sugerida</span></div>
+                </div>
+            </div>
+
+            <p class="text-center metrics-note text-light">Vista previa simulada del panel de monitoreo en tiempo real.</p>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- ===================== PADRES: Segmento secundario ===================== -->
+        <section id="padres" class="padres-section">
+            <div class="padres-text">
+                <span class="section-badge">PARA PADRES</span>
+                <h2 class="title-main text-white" data-i18n="padres_title">Padres</h2>
+                <p class="text-light">NeuroFocus muestra exactamente cuándo tu hijo se concentra y cuándo necesita apoyo. <strong>Datos reales, tranquilidad verdadera.</strong></p>
+                
+                <div class="grid-padres-features">
+                    <div class="feature-item">
+                        <p class="text-white">Reportes de concentración diaria</p>
+                        <img src="assets/images/image9.png" alt="Reporte diario">
+                    </div>
+                    <div class="feature-item">
+                        <p class="text-white">Comparativas de reporte semanal</p>
+                        <img src="assets/images/image10.png" alt="Comparativa">
+                    </div>
+                    <div class="feature-item">
+                        <p class="text-white">Historial de sesiones completadas</p>
+                        <img src="assets/images/image11.png" alt="Historial">
+                    </div>
+                </div>
+            </div>
+            <div class="padres-image">
+                <img src="assets/images/image12.png" alt="Madre e hijo">
+                <button id="open-contact-button" class="button-green" data-i18n="padres_btn">Contáctenos si tiene alguna duda →</button>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- ===================== SOBRE NOSOTROS: Entregas fundamentales ===================== -->
+        <section id="sobre-nosotros" class="nosotros-section">
+            <span class="section-badge section-badge-center">NUESTRO COMPROMISO</span>
+            <h2 class="title-section text-center text-white" data-i18n="nosotros_title">Sobre Nosotros</h2>
+            <p class="text-center text-light descripcion-general" data-i18n="nosotros_desc">Somos un equipo comprometido con mitigar la crisis de salud mental y rendimiento académico universitario. La productividad no debe costar la estabilidad emocional.</p>
+            
+            <div class="grid-entrega">
+                <div class="card-beige">
+                    <p class="text-small" data-i18n="ent_1">Identifica el "agotamiento silencioso" y ayuda a evitar el estrés crónico que afecta al 67.7% de los universitarios.</p>
+                    <img src="assets/images/image13.png" alt="Agotamiento silencioso">
+                </div>
+                <div class="card-beige">
+                    <p class="text-small" data-i18n="ent_2">Monitor preventivo que alerta antes de que la fatiga mental sea crítica, permitiendo gestión inteligente del esfuerzo.</p>
+                    <img src="assets/images/image14.png" alt="Monitor preventivo">
+                </div>
+                <div class="card-beige">
+                    <p class="text-small" data-i18n="ent_3">IA que monitorea biomarcadores digitales sin interrumpir el flujo de trabajo del estudiante.</p>
+                    <img src="assets/images/image15.png" alt="Biomarcadores">
+                </div>
+                <div class="card-beige">
+                    <p class="text-small" data-i18n="ent_4">Autorización científica basada en datos reales para pausas necesarias que mejoran el aprendizaje.</p>
+                    <img src="assets/images/image16.png" alt="Autorización científica">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer bg-black">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/neurofocus-logo.png" alt="NeuroFocus" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <a href="#" class="text-white" data-i18n="foot_privacidad">Políticas de Privacidad</a>
+                <span class="text-white">|</span>
+                <a href="#" class="text-white" data-i18n="foot_terminos">Términos y Condiciones</a>
+                <span class="text-white">|</span>
+                <a href="#" class="text-white" data-i18n="foot_soporte">Soporte</a>
+            </div>
+            <div class="social-icons">
+                <img src="assets/images/instragram.png" alt="Instagram" class="icon-social">
+                <img src="assets/images/facebook.png" alt="Facebook" class="icon-social">
+                <img src="assets/images/x.png" alt="X" class="icon-social">
+            </div>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-login-modal" class="close-btn">&times;</span>
+            <h2 class="text-white" data-i18n="modal_login_title">Iniciar Sesión</h2>
+            <form id="login-form">
+                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
+                <input type="email" id="login-email" class="input-field" placeholder="tu@correo.com" required>
+                
+                <label class="label-text" data-i18n="modal_password">Contraseña</label>
+                <input type="password" id="login-password" class="input-field" placeholder="••••••••" required>
+                
+                <p id="login-error" class="hidden error-text"></p>
+                <button type="submit" class="button-cyan w-100" data-i18n="modal_login_btn">Ingresar</button>
+            </form>
+            <div class="modal-foot-links">
+                <a href="#" id="open-password-link" class="text-cyan text-small" data-i18n="modal_forgot_pass">¿Olvidaste tu contraseña?</a>
+                <a href="#" id="open-register-link" class="text-light text-small" data-i18n="modal_no_account">¿No tienes cuenta? Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-register-modal" class="close-btn">&times;</span>
+            <h2 class="text-white" data-i18n="modal_reg_title">Crear Cuenta</h2>
+            <form id="register-form">
+                <label class="label-text" data-i18n="modal_reg_name">Nombre Completo</label>
+                <input type="text" id="reg-nombre" class="input-field" placeholder="Juan Pérez" required>
+                
+                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
+                <input type="email" id="reg-email" class="input-field" placeholder="tu@correo.com" required>
+                
+                <label class="label-text" data-i18n="modal_password">Contraseña</label>
+                <input type="password" id="reg-password" class="input-field" placeholder="••••••••" required>
+                
+                <p id="register-error" class="hidden error-text"></p>
+                <button type="submit" class="button-green w-100" data-i18n="modal_reg_btn">Registrarse</button>
+            </form>
+            <div class="modal-foot-links">
+                <a href="#" id="open-login-link" class="text-cyan text-small" data-i18n="modal_has_account">¿Ya tienes cuenta? Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="password-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-password-modal" class="close-btn">&times;</span>
+            <h2 class="text-white" data-i18n="modal_pass_title">Recuperar Contraseña</h2>
+            <p class="text-light text-small modal-description" data-i18n="modal_pass_desc">Ingresa tu correo para enviarte un enlace de recuperación.</p>
+            <form id="password-form">
+                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
+                <input type="email" id="pass-email" class="input-field" placeholder="tu@correo.com" required>
+                
+                <p id="password-message" class="hidden success-text"></p>
+                <button type="submit" class="button-cyan w-100" data-i18n="modal_pass_btn">Enviar Enlace</button>
+            </form>
+            <div class="modal-foot-links">
+                <a href="#" id="back-to-login-link" class="text-light text-small" data-i18n="modal_back_login">Volver a Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-contact-modal" class="close-btn">&times;</span>
+            <h2 class="text-white" data-i18n="modal_contact_title">Formulario de Contacto</h2>
+            <p class="text-light text-small modal-description" data-i18n="modal_contact_desc">¿Tienes preguntas sobre cómo ayudamos a tu hijo? Escríbenos.</p>
+            <form id="contact-form">
+                <label class="label-text" data-i18n="modal_reg_name">Nombre</label>
+                <input type="text" class="input-field" placeholder="Tu nombre" required>
+                
+                <label class="label-text" data-i18n="modal_email">Correo Electrónico</label>
+                <input type="email" class="input-field" placeholder="ejemplo@correo.com" required>
+                
+                <label class="label-text" data-i18n="modal_message">Mensaje</label>
+                <textarea class="input-field text-area-field" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                
+                <p id="contact-message" class="hidden success-text"></p>
+                <button type="submit" class="button-green w-100" data-i18n="modal_contact_btn">Enviar Mensaje →</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
