@@ -32,6 +32,10 @@ function retroceder() {
         if (vistaDestino) {
             vistaDestino.classList.add('active');
             window.scrollTo(0, 0);
+            
+            if (vistaAnterior === 'pantalla-dashboard-padres' && typeof renderizarDashboardPadres === 'function') {
+                renderizarDashboardPadres();
+            }
         }
     } else {
         // Fallback: si no hay historial (e.g., recargó la página), ir a login
