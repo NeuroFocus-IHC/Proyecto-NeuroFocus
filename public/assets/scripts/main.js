@@ -324,6 +324,10 @@ window.translations = {
         "No tienes notificaciones nuevas": "No tienes notificaciones nuevas",
         "Enlace enviado. Revisa tu bandeja.": "Enlace enviado. Revisa tu bandeja.",
         "Función en desarrollo": "Función en desarrollo",
+        dash_tutorial_1: "Te ayudamos a estudiar mejor cuidando tu concentración",
+        dash_tutorial_2: "Detectamos cuándo tu concentración baja mientras estudias, sin que te des cuenta",
+        dash_tutorial_3: "Cuando necesites descansar, te avisamos para que tomes una pausa y recargues energía",
+        dash_tutorial_4: "Ve cómo mejoras tus hábitos de estudio semana a semana",
         dash_entrar_estudiante: "ENTRAR COMO ESTUDIANTE"
     },
     en: {
@@ -651,6 +655,10 @@ window.translations = {
         "No tienes notificaciones nuevas": "No new notifications",
         "Enlace enviado. Revisa tu bandeja.": "Link sent. Check your inbox.",
         "Función en desarrollo": "Feature in development",
+        dash_tutorial_1: "We help you study better by taking care of your concentration",
+        dash_tutorial_2: "We detect when your concentration drops while you study, without you noticing",
+        dash_tutorial_3: "When you need to rest, we alert you to take a break and recharge your energy",
+        dash_tutorial_4: "See how you improve your study habits week by week",
         dash_entrar_estudiante: "LOG IN AS STUDENT"
     }
 };
@@ -661,6 +669,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Theme logic
     const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
     let currentTheme = localStorage.getItem('theme') || 'dark';
 
     function applyTheme(theme) {
@@ -669,19 +678,26 @@ document.addEventListener('DOMContentLoaded', function () {
         if (theme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
             if(themeToggleBtn) themeToggleBtn.textContent = isEn ? 'Dark Mode' : 'Modo Oscuro';
+            if(themeToggleBtnMobile) themeToggleBtnMobile.textContent = isEn ? 'Dark Mode' : 'Modo Oscuro';
         } else {
             document.documentElement.removeAttribute('data-theme');
             if(themeToggleBtn) themeToggleBtn.textContent = isEn ? 'Light Mode' : 'Modo Claro';
+            if(themeToggleBtnMobile) themeToggleBtnMobile.textContent = isEn ? 'Light Mode' : 'Modo Claro';
         }
     }
     applyTheme(currentTheme);
 
+    function toggleThemeAction() {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+        applyTheme(currentTheme);
+    }
+
     if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', function() {
-            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', currentTheme);
-            applyTheme(currentTheme);
-        });
+        themeToggleBtn.addEventListener('click', toggleThemeAction);
+    }
+    if (themeToggleBtnMobile) {
+        themeToggleBtnMobile.addEventListener('click', toggleThemeAction);
     }
 
     // i18n logic
@@ -733,14 +749,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const langToggleBtn = document.getElementById('lang-toggle');
+    const langToggleBtnMobile = document.getElementById('lang-toggle-mobile');
+
+    function toggleLangAction() {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        localStorage.setItem('lang', currentLang);
+        if(langToggleBtn) langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+        if(langToggleBtnMobile) langToggleBtnMobile.textContent = currentLang === 'es' ? 'EN' : 'ES';
+        updateLanguage();
+    }
+
     if (langToggleBtn) {
         langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-        langToggleBtn.addEventListener('click', function() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            localStorage.setItem('lang', currentLang);
-            langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-            updateLanguage();
-        });
+        langToggleBtn.addEventListener('click', toggleLangAction);
+    }
+    if (langToggleBtnMobile) {
+        langToggleBtnMobile.textContent = currentLang === 'es' ? 'EN' : 'ES';
+        langToggleBtnMobile.addEventListener('click', toggleLangAction);
     }
 
     function updateLanguage() {
