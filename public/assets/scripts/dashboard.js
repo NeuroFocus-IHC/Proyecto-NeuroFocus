@@ -3,8 +3,6 @@ let historialNavegacion = [];
 function navegarA(idDestino) {
     const vistaActual = document.querySelector('.view.active');
     
-    // Solo agregar al historial si estamos yendo a una pantalla diferente y no es un "retroceso" manual.
-    // Para simplificar, asumiremos que todas las navegaciones normales avanzan, y retroceder() manejará el historial.
     if (vistaActual && vistaActual.id !== idDestino) {
         historialNavegacion.push(vistaActual.id);
     }
@@ -38,9 +36,8 @@ function retroceder() {
             }
         }
     } else {
-        // Fallback: si no hay historial (e.g., recargó la página), ir a login
         navegarA('pantalla-login');
-        historialNavegacion = []; // clear the push that just happened
+        historialNavegacion = [];
     }
 }
 
@@ -439,15 +436,12 @@ function eliminarHijo() {
     const index = hijosRegistrados.findIndex(h => h.nombre.toLowerCase() === nombre);
     
     if (index !== -1) {
-        // Eliminar al hijo del arreglo de memoria
         hijosRegistrados.splice(index, 1);
         
-        // Configurar el texto en mayúsculas e interactuar con el nuevo modal personalizado
         const modalText = document.getElementById('delete-modal-text');
         modalText.innerText = `SE HA ELIMINADO A ${nombreOriginal.toUpperCase()} DE TU LISTA CORRECTAMENTE`;
         document.getElementById('delete-success-modal').classList.remove('hidden');
         
-        // Limpiar el campo de texto
         input.value = '';
     } else {
         alert("No se encontró ningún hijo registrado con ese nombre.");
@@ -478,7 +472,7 @@ function cambiarTamanoLetra(size) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Theme logic
+
     const dashboardThemeToggle = document.getElementById('dashboard-theme-toggle');
     const padresThemeToggle = document.getElementById('padres-theme-toggle');
     let currentTheme = localStorage.getItem('theme') || 'dark';
@@ -507,7 +501,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (dashboardThemeToggle) dashboardThemeToggle.addEventListener('click', toggleTheme);
     if (padresThemeToggle) padresThemeToggle.addEventListener('click', toggleTheme);
 
-    // Language logic
     const dashboardLangToggle = document.getElementById('dashboard-lang-toggle');
     const padresLangToggle = document.getElementById('padres-lang-toggle');
     const loginLangToggle = document.getElementById('login-lang-toggle');
@@ -520,7 +513,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (loginLangToggle) loginLangToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
         if (loginPadresLangToggle) loginPadresLangToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
         
-        // This relies on i18n data-i18n attributes on dashboard elements.
         const elements = document.querySelectorAll('[data-i18n]');
         if (window.translations && window.translations[currentLang]) {
             elements.forEach(function (element) {
@@ -550,7 +542,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loginLangToggle) loginLangToggle.addEventListener('click', toggleLang);
     if (loginPadresLangToggle) loginPadresLangToggle.addEventListener('click', toggleLang);
 
-    // Toast Container
     if (!document.getElementById('toast-container')) {
         const container = document.createElement('div');
         container.id = 'toast-container';
@@ -574,16 +565,14 @@ function mostrarToast(mensaje) {
     
     container.appendChild(toast);
     
-    // Trigger animation
     setTimeout(() => {
         toast.classList.add('show');
     }, 10);
 
-    // Remove after 3 seconds
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => {
             toast.remove();
-        }, 300); // match css transition
+        }, 300);
     }, 3000);
 }

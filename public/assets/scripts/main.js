@@ -671,7 +671,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Theme logic
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
     let currentTheme = localStorage.getItem('theme') || 'dark';
@@ -704,7 +703,6 @@ document.addEventListener('DOMContentLoaded', function () {
         themeToggleBtnMobile.addEventListener('click', toggleThemeAction);
     }
 
-    // i18n logic
     let currentLang = localStorage.getItem('lang') || 'es';
 
     mobileMenuBtn.addEventListener('click', function () {
